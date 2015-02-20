@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Knot Suite Web</title>
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
     <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,500,700" rel="stylesheet">
     <script src="/assets/js/routes.js"></script>
@@ -18,35 +20,32 @@
           <div class="menu-group-left">
             <ul class="menu-bar">
               <li><a href="#">KSW</a></li>
-              <li data-ng-if="isLoggedIn"><a href="javascript:;" ng-click="signOut()">Log Off</a></li>
             </ul>
           </div>
 
-          <div class="menu-group-right" data-ng-if="isLoggedIn">
+          <div class="menu-group-right  menu-group-flex-row" data-ng-if="isLoggedIn">
             <ul class="icon-left menu-bar">
-              <li class="divider"><a href="#/"><img zf-iconic="" icon="home" size="medium" class="iconic-color-success"></a></li>
+              <li class="divider"><a href="/"><img zf-iconic="" icon="home" size="small" class="iconic-color-success"></a></li>
 
-              <li class="divider"><a href="#!/profile"><img zf-iconic="" icon="cog" size="medium" class="iconic-color-success"></a></li>
+              <li class="divider"><a href="/profile"><img zf-iconic="" icon="cog" size="small" class="iconic-color-success"></a></li>
 
-              <li class="divider"><a href="#!/myProfile"><img zf-iconic="" icon="person" size="medium" class="iconic-color-success"></a></li>
+              <li class="divider"><a href="/myProfile"><img zf-iconic="" icon="person" size="small" class="iconic-color-success"></a></li>
 
-              <li class="divider"><a href="#"><img zf-iconic="" icon="envelope" size="medium" class="iconic-color-success"></a></li>
+              <li class="divider"><a href="#"><img zf-iconic="" icon="envelope" size="small" class="iconic-color-success"></a></li>
 
-              <li class="divider"><a href="#"><img zf-iconic="" icon="bell" size="medium" class="iconic-color-success"></a></li>
+              <li class="divider"><a href="#"><img zf-iconic="" icon="bell" size="small" class="iconic-color-success"></a></li>
               <li class="divider"><a href="#">
                 <img ng-src="{{profilePicture}}" class="user-icon">
-                <!--{{userName}}-->
+                {{userName}}
               </a>
               </li>
-              <!--<li class="">-->
-                <!--<a href="#"> </a>-->
-              <!--</li>-->
+              <li data-ng-if="isLoggedIn" class="divider"><a href="javascript:;" ng-click="signOut()">Log Off</a></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="grid-content">
+      <div class="grid-content custom-grid-content">
           <div ng-class="['ui-animation']" ui-view></div>
       </div>
     </div>
