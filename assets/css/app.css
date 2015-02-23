@@ -8130,6 +8130,9 @@ blockquote p {
 .myProfile .myPhoto {
   max-width: 95%; }
 
+.fa-icon-warning {
+  color: #F08A24; }
+
 .knot-container {
   background-color: #13625B; }
 
