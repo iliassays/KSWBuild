@@ -1,41 +1,33 @@
 
 <form class="personal-settings-form">
     <div class="grid-block">
-        <div class="small-12 medium-6 grid-content grid-content">
-            <div class="row">
-                <h3>Personal Settings</h3>
+        <div class="small-12 medium-7 grid-content">
+            <div class="grid-block">
+                <div class="grid-content">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Name">
+                </div>
             </div>
-                <div class="row">
-                    <div class="two mobile-one columns">
-                        <label class="right inline">Name : </label>
-                    </div>
-                    <div class="ten mobile-three columns">
-                        <input type="text" placeholder="Name" class="eight">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="two mobile-one columns">
-                        <label class="right inline">Password : </label>
-                    </div>
-                    <div class="ten mobile-three columns">
-                        <input type="password" class="eight" placeholder="Password">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="two mobile-one columns">
 
-                    </div>
-                    <div class="ten mobile-three columns">
-                        <a class="button" ng-click="saveDate()">Save</a>
-                    </div>
+            <div class="grid-block">
+                <div class="grid-content">
+                    <label>Password:</label>
+                    <input type="password" placeholder="Password">
                 </div>
-        </div>
-        <div class="small-12 medium-6 grid-content">
-            <div class="row">
-                <h3>Profile Picture</h3>
             </div>
-            <div class="row">
-                <div class="ten mobile-three columns" profile-image="fileValue">
+
+            <div class="grid-block">
+                <div class="grid-content">
+                    <a class="button" ng-click="saveDate()">Save</a>
+                </div>
+            </div>
+        </div>
+        <div class="small-12 medium-5 grid-content">
+            <div class="grid-block">
+                <div class="grid-content small-12 medium-4">
+                    <h3>Profile Picture</h3>
+                    <div class="ten mobile-three columns" ksw-profile-picture="fileValue">
+                    </div>
                 </div>
             </div>
         </div>

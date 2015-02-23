@@ -441,11 +441,11 @@ a, [ui-sref] {
     stroke: #00558b; }
 
 .iconic-color-success * {
-  fill: #43AC6A;
-  stroke: #43AC6A; }
+  fill: #6dc631;
+  stroke: #6dc631; }
   .iconic-color-success *.iconic-property-accent {
-    fill: #43AC6A;
-    stroke: #43AC6A; }
+    fill: #6dc631;
+    stroke: #6dc631; }
 
 .iconic-color-warning * {
   fill: #F08A24;
@@ -990,10 +990,10 @@ a, [ui-sref] {
         fill: #000;
         stroke: #000; }
   .button.success, button.success {
-    background: #43AC6A;
+    background: #6dc631;
     color: #fff; }
     .button.success:hover, button.success:hover, .button.success:focus, button.success:focus {
-      background: #39925a;
+      background: #5da82a;
       color: #fff; }
     .button.success[data-popup-toggle]::after, button.success[data-popup-toggle]::after {
       border-top-color: #fff; }
@@ -1104,27 +1104,27 @@ a, [ui-sref] {
           fill: #f4f4f4;
           stroke: #f4f4f4; }
     .button.hollow.success, button.hollow.success {
-      border: 1px solid #43AC6A;
+      border: 1px solid #6dc631;
       background: transparent;
-      color: #43AC6A; }
+      color: #6dc631; }
       .button.hollow.success:hover, button.hollow.success:hover, .button.hollow.success:focus, button.hollow.success:focus {
-        border-color: #6dc68e;
+        border-color: #91d861;
         background: transparent;
-        color: #6dc68e; }
+        color: #91d861; }
       .button.hollow.success[data-popup-toggle]::after, button.hollow.success[data-popup-toggle]::after {
-        border-top-color: #43AC6A; }
+        border-top-color: #6dc631; }
       .button.hollow.success .iconic *, button.hollow.success .iconic * {
-        fill: #43AC6A;
-        stroke: #43AC6A; }
+        fill: #6dc631;
+        stroke: #6dc631; }
         .button.hollow.success .iconic *.iconic-property-accent, button.hollow.success .iconic *.iconic-property-accent {
-          fill: #43AC6A;
-          stroke: #43AC6A; }
+          fill: #6dc631;
+          stroke: #6dc631; }
       .button.hollow.success:hover .iconic *, button.hollow.success:hover .iconic * {
-        fill: #6dc68e;
-        stroke: #6dc68e; }
+        fill: #91d861;
+        stroke: #91d861; }
         .button.hollow.success:hover .iconic *.iconic-property-accent, button.hollow.success:hover .iconic *.iconic-property-accent {
-          fill: #6dc68e;
-          stroke: #6dc68e; }
+          fill: #91d861;
+          stroke: #91d861; }
     .button.hollow.warning, button.hollow.warning {
       border: 1px solid #F08A24;
       background: transparent;
@@ -1302,11 +1302,11 @@ a, [ui-sref] {
   .button-group.secondary > li.is-active > a, .button-group.secondary > li.is-active > label, .button-group.secondary > li.is-active > button {
     background: #cdcdcd; }
   .button-group.success > li > a, .button-group.success > li > label, .button-group.success > li > button {
-    background: #43AC6A;
+    background: #6dc631;
     color: #fff;
-    border-color: #39925a; }
+    border-color: #5da82a; }
     .button-group.success > li > a:hover, .button-group.success > li > a:focus, .button-group.success > li > label:hover, .button-group.success > li > label:focus, .button-group.success > li > button:hover, .button-group.success > li > button:focus {
-      background: #39925a;
+      background: #5da82a;
       color: #fff; }
     .button-group.success > li > a[data-popup-toggle]::after, .button-group.success > li > label[data-popup-toggle]::after, .button-group.success > li > button[data-popup-toggle]::after {
       border-top-color: #fff; }
@@ -1317,7 +1317,7 @@ a, [ui-sref] {
         fill: #fff;
         stroke: #fff; }
   .button-group.success > li.is-active > a, .button-group.success > li.is-active > label, .button-group.success > li.is-active > button {
-    background: #39925a; }
+    background: #5da82a; }
   .button-group.warning > li > a, .button-group.warning > li > label, .button-group.warning > li > button {
     background: #F08A24;
     color: #fff;
@@ -1370,16 +1370,16 @@ a, [ui-sref] {
         fill: #000;
         stroke: #000; }
   .button-group > li.success > a, .button-group > li.success > label, .button-group > li.success > button {
-    background: #43AC6A;
+    background: #6dc631;
     color: #fff;
-    border-color: #43AC6A; }
+    border-color: #6dc631; }
     .button-group > li.success > a:hover, .button-group > li.success > a:focus, .button-group > li.success > label:hover, .button-group > li.success > label:focus, .button-group > li.success > button:hover, .button-group > li.success > button:focus {
-      background: #39925a;
+      background: #5da82a;
       color: #fff; }
     .button-group > li.success > a[data-popup-toggle]::after, .button-group > li.success > label[data-popup-toggle]::after, .button-group > li.success > button[data-popup-toggle]::after {
       border-top-color: #fff; }
     .button-group > li.success > a:hover, .button-group > li.success > a:focus, .button-group > li.success > label:hover, .button-group > li.success > label:focus, .button-group > li.success > button:hover, .button-group > li.success > button:focus {
-      border-color: #32814f; }
+      border-color: #529525; }
     .button-group > li.success > a .iconic *, .button-group > li.success > label .iconic *, .button-group > li.success > button .iconic * {
       fill: #fff;
       stroke: #fff; }
@@ -1475,23 +1475,23 @@ a, [ui-sref] {
           fill: #000;
           stroke: #000; }
     .button-group.segmented.success {
-      border-color: #43AC6A; }
+      border-color: #6dc631; }
       .button-group.segmented.success > li > a, .button-group.segmented.success > li > label, .button-group.segmented.success > li > button {
-        border-color: #43AC6A;
-        color: #43AC6A; }
+        border-color: #6dc631;
+        color: #6dc631; }
         .button-group.segmented.success > li > a:hover, .button-group.segmented.success > li > label:hover, .button-group.segmented.success > li > button:hover {
-          background: rgba(67, 172, 106, 0.25);
-          color: #43AC6A; }
+          background: rgba(109, 198, 49, 0.25);
+          color: #6dc631; }
         .button-group.segmented.success > li > a .iconic *, .button-group.segmented.success > li > label .iconic *, .button-group.segmented.success > li > button .iconic * {
-          fill: #43AC6A;
-          stroke: #43AC6A; }
+          fill: #6dc631;
+          stroke: #6dc631; }
           .button-group.segmented.success > li > a .iconic *.iconic-property-accent, .button-group.segmented.success > li > label .iconic *.iconic-property-accent, .button-group.segmented.success > li > button .iconic *.iconic-property-accent {
-            fill: #43AC6A;
-            stroke: #43AC6A; }
+            fill: #6dc631;
+            stroke: #6dc631; }
       .button-group.segmented.success > li.is-active > a, .button-group.segmented.success > li.is-active > a:hover,
       .button-group.segmented.success > li > input:checked + label,
       .button-group.segmented.success > li > input:checked + label:hover {
-        background: #43AC6A;
+        background: #6dc631;
         color: #fff; }
       .button-group.segmented.success > li.is-active > a .iconic *,
       .button-group.segmented.success > li > input:checked + label .iconic * {
@@ -1616,7 +1616,7 @@ a, [ui-sref] {
   .card.success {
     border: 0;
     margin-bottom: 0.5rem;
-    background: #43AC6A;
+    background: #6dc631;
     color: #fff;
     border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -1626,7 +1626,7 @@ a, [ui-sref] {
     .card.success ul {
       margin-bottom: 0; }
     .card.success .card-divider {
-      background: #4ab873;
+      background: #76ce3b;
       padding: 1rem; }
   .card.warning {
     border: 0;
@@ -1907,9 +1907,9 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background: #00558b; }
 progress.high::-webkit-progress-value {
-  background: #43AC6A; }
+  background: #6dc631; }
 progress.high::-moz-progress-bar {
-  background: #43AC6A; }
+  background: #6dc631; }
 progress.medium::-webkit-progress-value {
   background: #e7cf00; }
 progress.medium::-moz-progress-bar {
@@ -1924,7 +1924,7 @@ meter {
   meter::-webkit-meter-bar {
     background: #ccc; }
   meter::-webkit-meter-optimum-value {
-    background: #43AC6A; }
+    background: #6dc631; }
   meter::-webkit-meter-suboptimum-value {
     background: #e7cf00; }
   meter::-webkit-meter-even-less-good-value {
@@ -1932,7 +1932,7 @@ meter {
   meter::-moz-meter-bar {
     background: #00558b; }
   meter:-moz-meter-optimum::-moz-meter-bar {
-    background: #43AC6A; }
+    background: #6dc631; }
   meter:-moz-meter-sub-optimum::-moz-meter-bar {
     background: #e7cf00; }
   meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
@@ -3686,7 +3686,7 @@ meter {
     border-radius: 0;
     color: #fff; }
   .label.success {
-    background: #43AC6A;
+    background: #6dc631;
     border-radius: 0;
     color: #fff; }
   .label.warning {
@@ -3730,7 +3730,7 @@ meter {
     background: #00558b;
     color: #fff; }
   .badge.success {
-    background: #43AC6A;
+    background: #6dc631;
     color: #fff; }
   .badge.warning {
     background: #F08A24;
@@ -5161,7 +5161,7 @@ meter {
   .notification, .notification h1, .notification h2, .notification h3, .notification h4, .notification h5, .notification h6 {
     color: white; }
   .notification.success {
-    background: #43AC6A;
+    background: #6dc631;
     padding: 1rem;
     border-radius: 4px; }
     .notification.success, .notification.success h1, .notification.success h2, .notification.success h3, .notification.success h4, .notification.success h5, .notification.success h6 {
@@ -8111,7 +8111,7 @@ blockquote p {
       padding: 5px 0px 0px 5px; }
 
 .login-divider {
-  border-left: 1px solid #95da00;
+  border-left: 1px solid #0d746a;
   max-width: 1.33%; }
 
 .site-header .divider {
@@ -8150,3 +8150,6 @@ blockquote p {
 
 .custom-grid-content {
   padding-top: 3px; }
+
+.body-background {
+  background-image: url("/assets/img/main-background.jpg"); }
