@@ -8127,11 +8127,201 @@ blockquote p {
       -ms-flex-flow: row nowrap !important;
           flex-flow: row nowrap !important; }
 
-.myProfile .myPhoto {
-  max-width: 95%; }
+.myProfile {
+  background-color: #f2f2f2;
+  padding-top: 10px;
+  padding-left: 27px;
+  padding-right: 27px; }
+  .myProfile .myPhoto {
+    max-height: 200px;
+    width: 100%; }
+  .myProfile .my-email {
+    color: #43b8ea; }
+  .myProfile .my-name-container {
+    margin-top: 0;
+    margin-bottom: 2px;
+    line-height: 16px; }
+  .myProfile .networkLinkBackground {
+    background-color: #6e8e6a;
+    margin-bottom: 2px !important; }
+    .myProfile .networkLinkBackground a:hover {
+      background-color: transparent;
+      color: white; }
+    .myProfile .networkLinkBackground a {
+      color: white; }
+  .myProfile .spacesLinkBackground {
+    background-color: #b71a81;
+    margin-bottom: 2px !important; }
+    .myProfile .spacesLinkBackground a:hover {
+      background-color: transparent;
+      color: white; }
+    .myProfile .spacesLinkBackground a {
+      color: white; }
+  .myProfile .viewAwardGalleryLinkBackground {
+    background-color: #009aae;
+    margin-bottom: 2px !important; }
+    .myProfile .viewAwardGalleryLinkBackground a:hover {
+      background-color: transparent;
+      color: white; }
+    .myProfile .viewAwardGalleryLinkBackground a {
+      color: white; }
+  .myProfile .nominateAnAwardLinkBackground {
+    background-color: #2e2e2e;
+    margin-bottom: 2px !important; }
+    .myProfile .nominateAnAwardLinkBackground a:hover {
+      background-color: transparent;
+      color: white; }
+    .myProfile .nominateAnAwardLinkBackground a {
+      color: white; }
+  .myProfile .block-list header {
+    margin-top: 0;
+    margin-bottom: 3px;
+    margin-left: 0; }
 
 .fa-icon-warning {
   color: #F08A24; }
+
+.compose-signal {
+  background-color: #0b5a0b;
+  padding-top: 10px;
+  padding-top: 14px;
+  border-radius: 11px;
+  margin-left: 2px !important; }
+  .compose-signal textarea {
+    resize: none;
+    margin-bottom: 0;
+    border: none;
+    height: 64px; }
+  .compose-signal .tagged-people {
+    background-color: white;
+    height: 46px; }
+    .compose-signal .tagged-people img {
+      height: 45px;
+      width: 45px;
+      float: left;
+      margin-right: 5px;
+      border: 1px solid; }
+  .compose-signal .attached-files {
+    float: left;
+    padding: 3px;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 4px; }
+    .compose-signal .attached-files label {
+      margin-right: 3px;
+      float: left;
+      color: #43b8ea; }
+    .compose-signal .attached-files i {
+      background-color: red;
+      cursor: pointer; }
+  .compose-signal .signal-bottom {
+    margin-top: 6px;
+    padding-right: 0; }
+    .compose-signal .signal-bottom .signal-attachment {
+      width: 40px;
+      height: 40px;
+      background: url("/assets/img/icons/signal/attach_file.png") no-repeat;
+      float: left;
+      cursor: pointer;
+      overflow: hidden; }
+      .compose-signal .signal-bottom .signal-attachment input {
+        display: block !important;
+        width: 40px !important;
+        height: 40px !important;
+        opacity: 0 !important;
+        overflow: hidden !important; }
+    .compose-signal .signal-bottom .signal-people-picker {
+      width: 40px;
+      height: 40px;
+      background: url("/assets/img/icons/signal/add_org.png") no-repeat;
+      float: left;
+      cursor: pointer; }
+    .compose-signal .signal-bottom .signal-connection {
+      width: 40px;
+      height: 40px;
+      background: url("/assets/img/icons/signal/add_tag.png") no-repeat;
+      float: left;
+      cursor: pointer;
+      margin-left: 3px; }
+    .compose-signal .signal-bottom .signal-post-button {
+      float: right; }
+      .compose-signal .signal-bottom .signal-post-button a {
+        width: 90px; }
+    .compose-signal .signal-bottom .signal-audience {
+      float: left;
+      margin-top: 11px;
+      padding-left: 12px; }
+      .compose-signal .signal-bottom .signal-audience a {
+        color: white; }
+
+.people-picker {
+  margin-left: 2px !important;
+  margin-top: 4px;
+  background: #E4E9EC;
+  padding: 4px; }
+  .people-picker img {
+    float: left;
+    height: 100px;
+    width: 96px;
+    padding-left: 16px; }
+  .people-picker .people-picker-results {
+    height: 450px;
+    overflow-y: auto !important; }
+  .people-picker .custom-people-picker-card {
+    background-color: #f5fff3;
+    cursor: pointer; }
+    .people-picker .custom-people-picker-card p {
+      line-height: 0;
+      text-align: center;
+      font-size: 14px;
+      color: #43b8ea; }
+    .people-picker .custom-people-picker-card p:first-of-type {
+      padding-top: 36px;
+      color: #000000;
+      font-weight: bold; }
+    .people-picker .custom-people-picker-card .email-container {
+      text-overflow: ellipsis;
+      width: 188px;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 10px; }
+    @media only screen and (min-width: 90.063em) and (max-width: 120em) {
+      .people-picker .custom-people-picker-card .email-container {
+        width: 100%; } }
+  .people-picker .selected-card {
+    border: 2px solid green; }
+
+.network-container {
+  margin-left: 2px !important; }
+  .network-container img {
+    float: left;
+    height: 100px;
+    width: 96px; }
+  .network-container h4 {
+    color: #000000; }
+  .network-container .custom-network-container-card {
+    background-color: #f5fff3;
+    cursor: pointer; }
+    .network-container .custom-network-container-card p {
+      line-height: 0;
+      text-align: center;
+      font-size: 14px;
+      color: #43b8ea; }
+    .network-container .custom-network-container-card p:first-of-type {
+      padding-top: 36px;
+      color: #000000;
+      font-weight: bold; }
+    .network-container .custom-network-container-card .email-container {
+      text-overflow: ellipsis;
+      width: 188px;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 10px; }
+    @media only screen and (min-width: 90.063em) and (max-width: 120em) {
+      .network-container .custom-network-container-card .email-container {
+        width: 100%; } }
+  .network-container .selected-card {
+    border: 2px solid green; }
 
 .knot-container {
   background-color: #13625B; }
@@ -8152,7 +8342,7 @@ blockquote p {
   background-color: white; }
 
 .custom-grid-content {
-  padding-top: 3px; }
+  padding: 1rem; }
 
 body {
   background-image: url("/assets/img/main-background.jpg"); }
