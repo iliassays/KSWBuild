@@ -8345,4 +8345,4 @@ blockquote p {
   padding: 1rem; }
 
 body {
-  background-image: url("/assets/img/main-background.jpg"); }
+  background: url("/assets/img/main-background.jpg") #33998e; }
