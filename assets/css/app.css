@@ -8323,6 +8323,27 @@ blockquote p {
   .network-container .selected-card {
     border: 2px solid green; }
 
+.select-award-main h4 {
+  color: #54afa6; }
+.select-award-main img {
+  margin-left: 25%;
+  width: 50%;
+  margin-top: 1%; }
+.select-award-main .custom-card .custom-section {
+  text-align: center; }
+.select-award-main .custom-card:hover {
+  border: 2px solid green;
+  cursor: pointer; }
+
+.nominate-award-main .custom-card img {
+  width: 60%;
+  margin-left: 19%;
+  margin-top: 1%; }
+.nominate-award-main .custom-card .custom-section {
+  text-align: center; }
+.nominate-award-main h4 {
+  color: #54afa6; }
+
 .knot-container {
   background-color: #13625B; }
 
