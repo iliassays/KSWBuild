@@ -15,37 +15,77 @@
   <body>
 
     <div class="grid-frame vertical">
-      <div class="grid-content shrink" style="padding: 0;" ng-controller="NavigationCtrl">
-        <div class="menu-group dark site-header">
+      <div class="grid-content shrink" data-ng-class="{ 'ksw-header': isLoggedIn }" ng-controller="NavigationCtrl">
+        <div class="menu-group site-header" data-ng-if="isLoggedIn">
           <div class="menu-group-left">
-            <ul class="menu-bar">
-              <li><a href="#">KSW</a></li>
+            <ul class="primary menu-bar">
+              <li class="background-color-home-or-connection-menu-item">
+                <a href="/myProfile">
+                  <img zf-iconic="" icon="home" size="medium" class="iconic-color-alert">
+                </a>
+              </li>
+              <li class="background-color-search-menu-item">
+                <a href="#">
+                  <img zf-iconic="" icon="magnifying-glass" size="medium" class="iconic-color-secondary">
+                </a>
+              </li>
             </ul>
           </div>
 
-          <div class="menu-group-right  menu-group-flex-row" data-ng-if="isLoggedIn">
-            <ul class="icon-left menu-bar">
-              <li class="divider"><a href="/"><img zf-iconic="" icon="home" size="small" class="iconic-color-success"></a></li>
+          <div class="menu-group-right  menu-group-flex-row">
+            <ul class="icon-left primary  menu-bar menu-bar-has-action-sheet">
 
-              <li class="divider"><a href="/profile"><img zf-iconic="" icon="cog" size="small" class="iconic-color-success"></a></li>
-
-              <li class="divider"><a href="/myProfile"><img zf-iconic="" icon="person" size="small" class="iconic-color-success"></a></li>
-
-              <li class="divider"><a href="#"><img zf-iconic="" icon="envelope" size="small" class="iconic-color-success"></a></li>
-
-              <li class="divider"><a href="#"><img zf-iconic="" icon="bell" size="small" class="iconic-color-success"></a></li>
-              <li class="divider"><a href="#">
-                <img ng-src="{{profilePicture}}" class="user-icon">
-                {{userName}}
-              </a>
+              <li class="background-color-home-or-connection-menu-item">
+                <a href="/myProfile">
+                  <img zf-iconic="" icon="person" size="medium" class="iconic-color-success">
+                </a>
               </li>
-              <li data-ng-if="isLoggedIn" class="divider"><a href="javascript:;" ng-click="signOut()">Log Off</a></li>
+
+              <li class="background-color-message-menu-item">
+                <a href="#">
+                  <img zf-iconic="" icon="envelope" size="medium" class="iconic-color-success">
+                </a>
+              </li>
+
+              <li class="background-color-notification-menu-item">
+                <a href="#">
+                  <img zf-iconic="" icon="bell" size="medium" class="iconic-color-success">
+                </a>
+              </li>
+
+              <li class="background-color-user-info-menu-item">
+                <div class="user-info">
+                  <div>{{userName}}</div>
+                  <div>{{accountType | capitalize}} Account</div>
+                </div>
+              </li>
+              <li class="background-color-dark" data-ksw-logged-in-user current-user-photo="{{profilePicture}}">
+                <zf-action-sheet id="current-user">
+                  <a href="#" zf-hard-toggle="current-user" class="action-trigger">
+                    <!--<img data-ng-src="{{profilePicture}}">-->
+                  </a>
+                  <div zf-as-content="" position="bottom">
+                    <ul>
+                      <li><a href="#">Personal</a></li>
+                      <li><a href="#">KSW</a></li>
+                      <li><a data-ng-click="signOut()">LOGOUT</a></li>
+                    </ul>
+                  </div>
+                  </zf-action-sheet>
+              </li>
+
+              <li class="background-color-success">
+                <a href="/profile">
+                  <img zf-iconic="" icon="cog" size="medium" class="iconic-color-success">
+                </a>
+              </li>
+
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="grid-content custom-grid-content">
+      <div class="grid-content" data-ng-class="{ 'ksw-content': isLoggedIn }">
           <div ng-class="['ui-animation']" ui-view></div>
       </div>
     </div>

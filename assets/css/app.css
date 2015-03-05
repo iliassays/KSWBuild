@@ -8084,6 +8084,45 @@ blockquote p {
 .fa-medium:before {
   content: ""; }
 
+.background-color-primary {
+  background-color: #00558b; }
+
+.background-color-secondary {
+  background-color: #f1f1f1; }
+
+.background-color-alert {
+  background-color: #F04124; }
+
+.background-color-info {
+  background-color: #A0D3E8; }
+
+.background-color-success {
+  background-color: #6dc631; }
+
+.background-color-warning {
+  background-color: #F08A24; }
+
+.background-color-dark {
+  background-color: #232323; }
+
+.background-color-gray {
+  background-color: #dfdfdf; }
+
+.background-color-home-or-connection-menu-item {
+  background-color: #b73a1e; }
+
+.background-color-search-menu-item {
+  background-color: #009fc4; }
+
+.background-color-message-menu-item {
+  background-color: #e77509; }
+
+.background-color-notification-menu-item {
+  background-color: #aa1778; }
+
+.background-color-user-info-menu-item {
+  background-color: #40444f; }
+
 .login-container {
   padding-top: 5%; }
   .login-container .logo {
@@ -8114,6 +8153,13 @@ blockquote p {
   border-left: 1px solid #0d746a;
   max-width: 1.33%; }
 
+.site-header #current-user {
+  width: 100%;
+  height: 61px; }
+  .site-header #current-user a:first-child {
+    height: 100%; }
+.site-header li a:hover {
+  background-color: transparent !important; }
 .site-header .divider {
   border-left: 1px #6c736c solid; }
 .site-header .iconic {
@@ -8122,61 +8168,80 @@ blockquote p {
   height: 16px;
   width: 16px;
   border-radius: 50%; }
+.site-header .user-info {
+  padding: .4rem .4rem .4rem 6rem;
+  color: white;
+  text-align: right; }
 .site-header .menu-group-flex-row a {
   -webkit-flex-flow: row nowrap !important;
       -ms-flex-flow: row nowrap !important;
           flex-flow: row nowrap !important; }
+.site-header .menu-bar-has-action-sheet {
+  overflow-x: visible; }
+.site-header .action-sheet-container .action-trigger {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+  .site-header .action-sheet-container .action-trigger > img, .site-header .action-sheet-container .action-trigger > .iconic {
+    margin: 0 1rem 0 0; }
 
-.myProfile {
-  background-color: #f2f2f2;
-  padding-top: 10px;
-  padding-left: 27px;
-  padding-right: 27px; }
-  .myProfile .myPhoto {
-    max-height: 200px;
-    width: 100%; }
-  .myProfile .my-email {
-    color: #43b8ea; }
-  .myProfile .my-name-container {
-    margin-top: 0;
-    margin-bottom: 2px;
-    line-height: 16px; }
-  .myProfile .networkLinkBackground {
-    background-color: #6e8e6a;
-    margin-bottom: 2px !important; }
-    .myProfile .networkLinkBackground a:hover {
-      background-color: transparent;
-      color: white; }
-    .myProfile .networkLinkBackground a {
-      color: white; }
-  .myProfile .spacesLinkBackground {
-    background-color: #b71a81;
-    margin-bottom: 2px !important; }
-    .myProfile .spacesLinkBackground a:hover {
-      background-color: transparent;
-      color: white; }
-    .myProfile .spacesLinkBackground a {
-      color: white; }
-  .myProfile .viewAwardGalleryLinkBackground {
-    background-color: #009aae;
-    margin-bottom: 2px !important; }
-    .myProfile .viewAwardGalleryLinkBackground a:hover {
-      background-color: transparent;
-      color: white; }
-    .myProfile .viewAwardGalleryLinkBackground a {
-      color: white; }
-  .myProfile .nominateAnAwardLinkBackground {
-    background-color: #2e2e2e;
-    margin-bottom: 2px !important; }
-    .myProfile .nominateAnAwardLinkBackground a:hover {
-      background-color: transparent;
-      color: white; }
-    .myProfile .nominateAnAwardLinkBackground a {
-      color: white; }
-  .myProfile .block-list header {
-    margin-top: 0;
-    margin-bottom: 3px;
-    margin-left: 0; }
+.my-profile .myPhoto {
+  max-height: 200px;
+  width: 100%; }
+.my-profile .my-email {
+  color: #43b8ea; }
+.my-profile .my-name-container {
+  margin-top: 0;
+  margin-bottom: 2px;
+  line-height: 16px; }
+.my-profile .networkLinkBackground {
+  background-color: #6e8e6a;
+  margin-bottom: 2px !important; }
+  .my-profile .networkLinkBackground a:hover {
+    background-color: transparent;
+    color: white; }
+  .my-profile .networkLinkBackground a {
+    color: white; }
+.my-profile .spacesLinkBackground {
+  background-color: #b71a81;
+  margin-bottom: 2px !important; }
+  .my-profile .spacesLinkBackground a:hover {
+    background-color: transparent;
+    color: white; }
+  .my-profile .spacesLinkBackground a {
+    color: white; }
+.my-profile .viewAwardGalleryLinkBackground {
+  background-color: #009aae;
+  margin-bottom: 2px !important; }
+  .my-profile .viewAwardGalleryLinkBackground a:hover {
+    background-color: transparent;
+    color: white; }
+  .my-profile .viewAwardGalleryLinkBackground a {
+    color: white; }
+.my-profile .nominateAnAwardLinkBackground {
+  background-color: #2e2e2e;
+  margin-bottom: 2px !important; }
+  .my-profile .nominateAnAwardLinkBackground a:hover {
+    background-color: transparent;
+    color: white; }
+  .my-profile .nominateAnAwardLinkBackground a {
+    color: white; }
+.my-profile .block-list header {
+  margin-top: 0;
+  margin-bottom: 3px;
+  margin-left: 0; }
 
 .fa-icon-warning {
   color: #F08A24; }
@@ -8344,8 +8409,13 @@ blockquote p {
 .nominate-award-main h4 {
   color: #54afa6; }
 
-.knot-container {
-  background-color: #13625B; }
+.ksw-header {
+  padding: 2rem;
+  overflow-y: visible !important; }
+
+.ksw-content {
+  padding: 1rem 2rem 2rem 3rem;
+  background-color: #f2f2f2; }
 
 .grid-container {
   max-width: 100%; }
