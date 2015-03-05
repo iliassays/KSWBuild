@@ -67,7 +67,9 @@
                   <div zf-as-content="" position="bottom">
                     <ul>
                       <li><a href="#">Personal</a></li>
-                      <li><a href="#">KSW</a></li>
+                      <li data-ng-repeat="connection in userData.corporateConnections">
+                        <a href="#">{{connection.title}}</a>
+                      </li>
                       <li><a data-ng-click="signOut()">LOGOUT</a></li>
                     </ul>
                   </div>
