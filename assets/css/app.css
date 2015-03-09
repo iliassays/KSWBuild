@@ -8172,6 +8172,8 @@ blockquote p {
   padding: .1rem .4rem .1rem 6rem;
   color: white;
   text-align: right; }
+  .site-header .user-info .accountType {
+    font-size: 11px; }
 .site-header .menu-group-flex-row a {
   -webkit-flex-flow: row nowrap !important;
       -ms-flex-flow: row nowrap !important;
