@@ -27,22 +27,14 @@
                         <h4>{{groupName | capitalize}}</h4>
 
                         <div class="card custom-network-container-card"
-                             data-ng-repeat="person in groupValue | filter: peopleSearchText"
-                             data-ng-class="{ 'selected-card': person.isSelected }"
-                             data-ng-click="toggleSelectPeople(person)">
+                             data-ng-repeat="person in groupValue | filter: peopleSearchText">
                             <div class="grid-block">
                                 <div class="grid-content shrink">
                                     <img ng-src="{{person.smallpicture}}">
                                 </div>
                                 <div class="grid-content wrap collapse">
-                                    <p>
-                                        {{person.title}}
-                                    </p>
-
-                                    <p class="email-container">
-                                        {{person.email}}
-
-                                    <p>
+                                    <p title="{{person.title}}">{{person.title}}</p>
+                                    <p class="email-container" title="{{person.email}}">{{person.email}}<p>
                                 </div>
                             </div>
                         </div>
