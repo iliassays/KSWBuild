@@ -540,7 +540,7 @@ a, [ui-sref] {
       */
       position: absolute;
       left: 50%;
-      width: 300px;
+      width: 560px;
       border-radius: 4px;
       opacity: 0;
       pointer-events: none;
@@ -591,7 +591,7 @@ a, [ui-sref] {
         */
         position: absolute;
         left: 50%;
-        width: 300px;
+        width: 560px;
         border-radius: 4px;
         opacity: 0;
         pointer-events: none;
@@ -5514,7 +5514,7 @@ meter {
     pointer-events: auto; }
 
 .popup {
-  width: 18.75rem;
+  width: 31.25rem;
   background: #fff;
   border-radius: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -8153,6 +8153,13 @@ blockquote p {
   border-left: 1px solid #0d746a;
   max-width: 1.33%; }
 
+.site-header .action-sheet.is-active {
+  -webkit-transform: translateX(-93%) translateY(100%);
+          transform: translateX(-93%) translateY(100%); }
+.site-header .action-sheet::before, .site-header .action-sheet::after {
+  left: 94%; }
+.site-header .menu-bar-color {
+  background-color: transparent !important; }
 .site-header #current-user {
   width: 100%;
   height: 51px; }
@@ -8160,6 +8167,8 @@ blockquote p {
     height: 100%; }
 .site-header li a:hover {
   background-color: transparent !important; }
+.site-header li {
+  margin-right: 2px; }
 .site-header .divider {
   border-left: 1px #6c736c solid; }
 .site-header .iconic {
@@ -8420,6 +8429,38 @@ blockquote p {
   text-align: center; }
 .nominate-award-main h4 {
   color: #54afa6; }
+
+.content-menu-action-sheet .content-menu-main {
+  margin-left: 15px !important;
+  height: 350px;
+  margin-right: 0px !important;
+  overflow: auto !important; }
+  .content-menu-action-sheet .content-menu-main .content-menu-content {
+    width: 114px;
+    margin: 0px 18px 18px 0px;
+    border: 1px solid #777474;
+    background-color: #9e9e9e;
+    cursor: pointer; }
+    .content-menu-action-sheet .content-menu-main .content-menu-content p {
+      font-size: 13px;
+      margin-bottom: 0px;
+      text-align: left;
+      text-overflow: ellipsis;
+      width: 110px;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 2px 2px 0px 2px;
+      color: white; }
+    .content-menu-action-sheet .content-menu-main .content-menu-content img {
+      width: 100%;
+      height: 112px; }
+.content-menu-action-sheet .content-menu-bottom {
+  margin-left: 32px;
+  height: 35px; }
+  .content-menu-action-sheet .content-menu-bottom .create-org:hover {
+    background-color: #6dc631 !important; }
+  .content-menu-action-sheet .content-menu-bottom .log-out:hover {
+    background-color: #F08A24 !important; }
 
 .ksw-header {
   padding: 2rem;

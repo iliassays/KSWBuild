@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en" ng-app="application">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Knot Suite Web</title>
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
 
@@ -11,85 +11,100 @@
     <script src="/assets/js/routes.js"></script>
     <script src="/assets/js/foundation.js"></script>
     <script src="/assets/js/app.js"></script>
-  </head>
-  <body>
+</head>
+<body>
 
-    <div class="grid-frame vertical">
-      <div class="grid-content shrink" data-ng-class="{ 'ksw-header': isLoggedIn }" ng-controller="NavigationCtrl">
+<div class="grid-frame vertical">
+    <div class="grid-content shrink" data-ng-class="{ 'ksw-header': isLoggedIn }" ng-controller="NavigationCtrl">
         <div class="menu-group site-header" data-ng-if="isLoggedIn">
-          <div class="menu-group-left">
-            <ul class="primary menu-bar">
-              <li class="background-color-home-or-connection-menu-item">
-                <a href="/myProfile">
-                  <img zf-iconic="" icon="home" size="medium" class="iconic-color-alert">
-                </a>
-              </li>
-              <li class="background-color-search-menu-item">
-                <a href="#">
-                  <img zf-iconic="" icon="magnifying-glass" size="medium" class="iconic-color-secondary">
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div class="menu-group-left">
+                <ul class="menu-bar-color menu-bar primary">
+                    <li class="background-color-home-or-connection-menu-item">
+                        <a href="/myProfile">
+                            <img zf-iconic="" icon="home" size="medium" class="iconic-color-alert">
+                        </a>
+                    </li>
+                    <li class="background-color-search-menu-item">
+                        <a href="#">
+                            <img zf-iconic="" icon="magnifying-glass" size="medium" class="iconic-color-secondary">
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-          <div class="menu-group-right  menu-group-flex-row">
-            <ul class="icon-left primary  menu-bar menu-bar-has-action-sheet">
+            <div class="menu-group-right  menu-group-flex-row">
+                <ul class="icon-left menu-bar-color primary menu-bar menu-bar-has-action-sheet">
 
-              <li class="background-color-home-or-connection-menu-item">
-                <a href="/myProfile">
-                  <img zf-iconic="" icon="person" size="medium" class="iconic-color-success">
-                </a>
-              </li>
+                    <li class="background-color-home-or-connection-menu-item">
+                        <a href="/myProfile">
+                            <img zf-iconic="" icon="person" size="medium" class="iconic-color-success">
+                        </a>
+                    </li>
 
-              <li class="background-color-message-menu-item">
-                <a href="#">
-                  <img zf-iconic="" icon="envelope" size="medium" class="iconic-color-success">
-                </a>
-              </li>
+                    <li class="background-color-message-menu-item">
+                        <a href="#">
+                            <img zf-iconic="" icon="envelope" size="medium" class="iconic-color-success">
+                        </a>
+                    </li>
 
-              <li class="background-color-notification-menu-item">
-                <a href="#">
-                  <img zf-iconic="" icon="bell" size="medium" class="iconic-color-success">
-                </a>
-              </li>
+                    <li class="background-color-notification-menu-item">
+                        <a href="#">
+                            <img zf-iconic="" icon="bell" size="medium" class="iconic-color-success">
+                        </a>
+                    </li>
 
-              <li class="background-color-user-info-menu-item">
-                <div class="user-info">
-                  <div>{{userName}}</div>
-                  <div class="accountType">{{accountType | capitalize}} Account</div>
-                </div>
-              </li>
-              <li class="background-color-dark" data-ksw-logged-in-user current-user-photo="{{profilePicture}}">
-                <zf-action-sheet id="current-user">
-                  <a href="#" zf-hard-toggle="current-user" class="action-trigger">
-                    <!--<img data-ng-src="{{profilePicture}}">-->
-                  </a>
-                  <div zf-as-content="" position="bottom">
-                    <ul>
-                      <li><a href="#">Personal</a></li>
-                      <li data-ng-repeat="connection in userData.corporateConnections">
-                        <a href="#">{{connection.title}}</a>
-                      </li>
-                      <li><a data-ng-click="signOut()">LOGOUT</a></li>
-                    </ul>
-                  </div>
-                  </zf-action-sheet>
-              </li>
+                    <li class="background-color-user-info-menu-item">
+                        <div class="user-info">
+                            <div>{{userName}}</div>
+                            <div class="accountType">{{accountType | capitalize}}</div>
+                        </div>
+                    </li>
+                    <li class="background-color-dark"  data-ksw-logged-in-user current-user-photo="{{profilePicture}}">
+                        <zf-action-sheet id="current-user">
+                            <a href="#"  zf-hard-toggle="current-user" class="action-trigger">
+                            </a>
+                            <div zf-as-content="" position="left">
+                                <div class="grid-block vertical content-menu-action-sheet">
+                                    <div class="grid-block horizontal content-menu-main">
+                                        <div data-ng-repeat="connection in userData.corporateConnections" data-ng-click="changeAccountType(connection)"
+                                             class="content-menu-content">
+                                            <img data-ng-src="{{getPictureUrl(connection)}}">
+                                            <p>{{userName}}</p>
+                                            <p>{{connection.title}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="grid-block align-center" style="margin: 0">
+                                       <div class="grid-content large-12">
+                                           <hr/>
+                                       </div>
+                                    </div>
+                                    <div class="align-justify grid-block content-menu-bottom">
+                                        <div class="grid-block large-3">
+                                            <a href="javascript:;" class="button success create-org">Create ORG</a>
+                                        </div>
+                                        <div class="grid-block large-3">
+                                            <a href="javascript:;" class="button warning log-out" data-ng-click="signOut()">LOGOUT</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </zf-action-sheet>
+                    </li>
 
-              <li class="background-color-success">
-                <a href="/profile">
-                  <img zf-iconic="" icon="cog" size="medium" class="iconic-color-success">
-                </a>
-              </li>
+                    <li class="background-color-success">
+                        <a href="/profile">
+                            <img zf-iconic="" icon="cog" size="medium" class="iconic-color-success">
+                        </a>
+                    </li>
 
-            </ul>
-          </div>
+                </ul>
+            </div>
         </div>
-      </div>
-
-      <div class="grid-content" data-ng-class="{ 'ksw-content': isLoggedIn }">
-          <div ng-class="['ui-animation']" ui-view></div>
-      </div>
     </div>
-  </body>
+
+    <div class="grid-content" data-ng-class="{ 'ksw-content': isLoggedIn }">
+        <div ng-class="['ui-animation']" ui-view></div>
+    </div>
+</div>
+</body>
 </html>
