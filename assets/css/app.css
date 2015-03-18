@@ -8153,11 +8153,14 @@ blockquote p {
   border-left: 1px solid #0d746a;
   max-width: 1.33%; }
 
-.site-header .action-sheet.is-active {
-  -webkit-transform: translateX(-93%) translateY(100%);
-          transform: translateX(-93%) translateY(100%); }
+.site-header .action-sheet {
+  border-radius: 0; }
 .site-header .action-sheet::before, .site-header .action-sheet::after {
   left: 94%; }
+@media only screen and (min-width: 50em) {
+  .site-header .action-sheet.is-active {
+    -webkit-transform: translateX(-93%) translateY(100%);
+            transform: translateX(-93%) translateY(100%); } }
 .site-header .menu-bar-color {
   background-color: transparent !important; }
 .site-header #current-user {
@@ -8489,4 +8492,4 @@ blockquote p {
   padding: 1rem; }
 
 body {
-  background: url("/assets/img/main-background.jpg") #33998e; }
+  background: #0b564d; }
