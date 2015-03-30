@@ -8465,6 +8465,26 @@ blockquote p {
   .content-menu-action-sheet .content-menu-bottom .log-out:hover {
     background-color: #F08A24 !important; }
 
+.footer {
+  background-color: #355e3b;
+  padding: 1rem;
+  color: #ffffff; }
+  .footer a {
+    float: left;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-right: solid 2px #A89E9E;
+    padding: 0 5px 0 5px; }
+    .footer a:hover {
+      text-decoration: underline; }
+  .footer a:last-of-type {
+    border-right: none; }
+  .footer p {
+    float: right;
+    line-height: 0;
+    margin-bottom: 0;
+    padding: 6px 0 0 0; }
+
 .ksw-header {
   padding: 2rem;
   overflow-y: visible !important; }

@@ -1,6 +1,49 @@
 <!doctype html>
 <html lang="en" ng-app="application">
 <head>
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function (f, b) {
+        if (!b.__SV) {
+            var a, e, i, g;
+            window.mixpanel = b;
+            b._i = [];
+            b.init = function (a, e, d) {
+                function f(b, h) {
+                    var a = h.split(".");
+                    2 == a.length && (b = b[a[0]], h = a[1]);
+                    b[h] = function () {
+                        b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }
+
+                var c = b;
+                "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+                c.people = c.people || [];
+                c.toString = function (b) {
+                    var a = "mixpanel";
+                    "mixpanel" !== d && (a += "." + d);
+                    b || (a += " (stub)");
+                    return a
+                };
+                c.people.toString = function () {
+                    return c.toString(1) + ".people (stub)"
+                };
+                i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                for (g = 0; g < i.length; g++)f(c, i[g]);
+                b._i.push([a, e, d])
+            };
+            b.__SV = 1.2;
+            a = f.createElement("script");
+            a.type = "text/javascript";
+            a.async = !0;
+            a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+            e = f.getElementsByTagName("script")[0];
+            e.parentNode.insertBefore(a, e)
+        }
+    })(document, window.mixpanel || []);
+    mixpanel.init("831ac6635ee3faebe958574313bfafcc");
+    </script>
+    <!-- end Mixpanel -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Knot Suite Web</title>
@@ -59,31 +102,35 @@
                             <div class="accountType">{{accountType | capitalize}}</div>
                         </div>
                     </li>
-                    <li class="background-color-dark"  data-ksw-logged-in-user current-user-photo="{{profilePicture}}">
+                    <li class="background-color-dark" data-ksw-logged-in-user current-user-photo="{{profilePicture}}">
                         <zf-action-sheet id="current-user">
-                            <a href="#"  zf-hard-toggle="current-user" class="action-trigger">
+                            <a href="#" zf-hard-toggle="current-user" class="action-trigger">
                             </a>
+
                             <div zf-as-content="" position="bottom">
                                 <div class="grid-block vertical content-menu-action-sheet">
                                     <div class="grid-block horizontal content-menu-main">
-                                        <div data-ng-repeat="connection in userData.corporateConnections" data-ng-click="changeAccountType(connection)"
+                                        <div data-ng-repeat="connection in userData.corporateConnections"
+                                             data-ng-click="changeAccountType(connection)"
                                              class="content-menu-content">
                                             <img data-ng-src="{{getPictureUrl(connection)}}">
                                             <p>{{userName}}</p>
+
                                             <p>{{connection.title}}</p>
                                         </div>
                                     </div>
                                     <div class="grid-block align-center" style="margin: 0">
-                                       <div class="grid-content large-12">
-                                           <hr/>
-                                       </div>
+                                        <div class="grid-content large-12">
+                                            <hr/>
+                                        </div>
                                     </div>
                                     <div class="align-justify grid-block content-menu-bottom">
                                         <div class="grid-block large-3">
                                             <a href="javascript:;" class="button success create-org">Create ORG</a>
                                         </div>
                                         <div class="grid-block large-3">
-                                            <a href="javascript:;" class="button warning log-out" data-ng-click="signOut()">LOGOUT</a>
+                                            <a href="javascript:;" class="button warning log-out"
+                                               data-ng-click="signOut()">LOGOUT</a>
                                         </div>
                                     </div>
                                 </div>
@@ -104,6 +151,14 @@
 
     <div class="grid-content" data-ng-class="{ 'ksw-content': isLoggedIn }">
         <div ng-class="['ui-animation']" ui-view></div>
+    </div>
+    <div class="footer" data-ng-if="isLoggedIn">
+        <a href="#">About</a>
+        <a href="https://knotsuiteblog.wordpress.com/">Blog</a>
+        <a href="#">User Agreement</a>
+        <a href="#">Comment</a>
+
+        <p> &copy; SiSigma-2015</p>
     </div>
 </div>
 </body>
