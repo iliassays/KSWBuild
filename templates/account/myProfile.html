@@ -4,7 +4,7 @@
             <a zf-close class="close-button hide-for-medium">&times;</a>
             <section class="block-list custom-block-list">
                 <header class="title">
-                    <img src="{{myPhoto}}" class="myPhoto"></header>
+                    <img src="{{myPhoto | kswUrlFilter}}" class="myPhoto"></header>
                 <ul>
                     <li class="networkLinkBackground">
                         <a ui-sref="myProfile.myNetworks">

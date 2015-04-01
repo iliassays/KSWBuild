@@ -110,10 +110,17 @@
                             <div zf-as-content="" position="bottom">
                                 <div class="grid-block vertical content-menu-action-sheet">
                                     <div class="grid-block horizontal content-menu-main">
-                                        <div data-ng-repeat="connection in userData.corporateConnections"
+
+                                        <div class="content-menu-content" data-ng-click="changePersonalAccount()">
+                                            <img data-ng-src="{{getPictureUrl(personalAccountInfo.imgSrc)}}">
+                                            <p>{{userName}}</p>
+                                            <p>Personal Account</p>
+                                        </div>
+
+                                        <div data-ng-repeat="connection in corporateConnections"
                                              data-ng-click="changeAccountType(connection)"
                                              class="content-menu-content">
-                                            <img data-ng-src="{{getPictureUrl(connection)}}">
+                                            <img data-ng-src="{{getPictureUrl(connection.smallpicture)}}">
                                             <p>{{userName}}</p>
 
                                             <p>{{connection.title}}</p>
@@ -149,7 +156,7 @@
         </div>
     </div>
 
-    <div class="grid-content" data-ng-class="{ 'ksw-content': isLoggedIn }">
+    <div class="grid-content" data-ng-class="{ 'ksw-content': isLoggedIn }" data-ksw-on-scroll>
         <div ng-class="['ui-animation']" ui-view></div>
     </div>
     <div class="footer" data-ng-if="isLoggedIn">
