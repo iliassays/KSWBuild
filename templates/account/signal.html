@@ -1,0 +1,67 @@
+
+<div class="grid-block horizontal">
+    <div class="grid-content large-5">
+        <div class="grid-block">
+            <div class="grid-content">
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <h4 class="my-name-container">{{myName}}</h4>
+
+                        <p class="my-email">{{myEmail}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-content large-7 small-11">
+        <ksw-compose-signal ksw-signal="signal">
+
+        </ksw-compose-signal>
+
+        <ksw-people-picker>
+
+        </ksw-people-picker>
+
+        <div class="grid-block vertical">
+            <div class="grid-content signal-main" data-ng-repeat="signal in signals">
+                <div class="signal-header" data-ng-if="signal.doc.updateAreaString" data-ksw-update-string-area string="{{signal.doc.updateAreaString}}">
+                </div>
+
+                <div class="signal-content">
+                    <img data-ng-src="{{signal.doc.actor.url | kswUrlFilter}}">
+
+                    <div class="message">
+                        <span class="userName">{{signal.doc.actor.displayName}} </span>
+                        {{signal.doc.title}}
+                    </div>
+                    <div class="bottom">
+                        <p>{{signal.doc.published | kswDateDifference}}</p>
+                        <p><i class="fa fa-thumbs-up"></i> 0 <i class="fa fa-thumbs-down"></i> 0</p>
+                    </div>
+                </div>
+                <div class="signal-comment" data-ng-repeat="comment in signal.comments">
+                    <img data-ng-src="{{comment.actor.url | kswUrlFilter}}">
+
+                    <div class="message">
+                        <span class="userName">{{comment.actor.displayName}} </span>
+                        {{comment.title}}
+                    </div>
+                    <div class="bottom">
+                        <p>{{comment.published | kswDateDifference}}</p>
+                        <p><i class="fa fa-thumbs-up"></i> 0  <i class="fa fa-thumbs-down"></i> 0</p>
+                    </div>
+                </div>
+
+                <div class="signal-comment">
+                    <img src="{{myPhoto | kswUrlFilter}}">
+                    <div class="message"><textarea placeholder="Write your comment here"></textarea></div>
+                    <div class="bottom">
+                        <a class="button success">Reply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
