@@ -8534,6 +8534,9 @@ blockquote p {
     padding: 6px 0 0 0;
     font-size: 12px; }
 
+.margin-top-5 {
+  margin-top: 5px; }
+
 .ksw-header {
   padding: 2rem;
   overflow-y: visible !important; }
