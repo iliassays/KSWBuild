@@ -37,7 +37,7 @@
                     </div>
                     <div class="bottom">
                         <p>{{signal.doc.published | kswDateDifference}}</p>
-                        <p><i class="fa fa-thumbs-up"></i> 0 <i class="fa fa-thumbs-down"></i> 0</p>
+                        <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(signal.doc)"></i> {{signal.doc.fbYes.length}} <i class="fa fa-thumbs-down" data-ng-click="saveDisLike(signal.doc)"></i> {{signal.doc.fbNo.length}}</p>
                     </div>
                 </div>
                 <div class="signal-comment" data-ng-repeat="comment in signal.comments">
@@ -49,7 +49,7 @@
                     </div>
                     <div class="bottom">
                         <p>{{comment.published | kswDateDifference}}</p>
-                        <p><i class="fa fa-thumbs-up"></i> 0  <i class="fa fa-thumbs-down"></i> 0</p>
+                        <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(comment)"></i> {{comment.fbYes.length}}  <i class="fa fa-thumbs-down" data-ng-click="saveDisLike(comment)"></i> {{comment.fbNo.length}}</p>
                     </div>
                 </div>
 
