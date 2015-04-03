@@ -8355,8 +8355,6 @@ blockquote p {
       float: left; }
     .signal-main .bottom p:nth-child(2) {
       float: right; }
-    .signal-main .bottom a {
-      float: right; }
   .signal-main img {
     float: left;
     height: 60px;
@@ -8366,7 +8364,7 @@ blockquote p {
     text-align: justify; }
   .signal-main .signal-header {
     background-color: #f4ead9;
-    padding: 5px;
+    padding: 1rem;
     margin-bottom: 8px; }
     .signal-main .signal-header span {
       color: #60a8cd; }
@@ -8379,6 +8377,37 @@ blockquote p {
       height: 50px;
       width: 50px;
       float: left; }
+  .signal-main .new-comment {
+    clear: both;
+    margin-top: 10px; }
+    .signal-main .new-comment img {
+      height: 50px;
+      width: 50px; }
+    .signal-main .new-comment .new-comment-attachment {
+      margin-left: 75px; }
+      .signal-main .new-comment .new-comment-attachment label {
+        color: #008CBA; }
+        .signal-main .new-comment .new-comment-attachment label i {
+          color: red;
+          cursor: pointer; }
+    .signal-main .new-comment .new-comment-bottom {
+      margin-left: 75px; }
+      .signal-main .new-comment .new-comment-bottom .attachment {
+        width: 40px;
+        height: 40px;
+        background: #6dc631 url("/assets/img/icons/signal/attach_file.png") no-repeat;
+        float: left;
+        cursor: pointer;
+        overflow: hidden;
+        background-position: 50% 50%; }
+        .signal-main .new-comment .new-comment-bottom .attachment input {
+          display: block !important;
+          width: 40px !important;
+          height: 40px !important;
+          opacity: 0 !important;
+          overflow: hidden !important; }
+      .signal-main .new-comment .new-comment-bottom a {
+        float: right; }
 
 .people-picker {
   margin-left: 2px !important;

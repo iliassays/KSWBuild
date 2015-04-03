@@ -25,7 +25,8 @@
 
         <div class="grid-block vertical">
             <div class="grid-content signal-main" data-ng-repeat="signal in signals">
-                <div class="signal-header" data-ng-if="signal.doc.updateAreaString" data-ksw-update-string-area string="{{signal.doc.updateAreaString}}">
+                <div class="signal-header" data-ng-if="signal.doc.updateAreaString" data-ksw-update-string-area
+                     string="{{signal.doc.updateAreaString}}">
                 </div>
 
                 <div class="signal-content">
@@ -37,9 +38,14 @@
                     </div>
                     <div class="bottom">
                         <p>{{signal.doc.published | kswDateDifference}}</p>
-                        <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(signal.doc)"></i> {{signal.doc.fbYes.length}} <i class="fa fa-thumbs-down" data-ng-click="saveDisLike(signal.doc)"></i> {{signal.doc.fbNo.length}}</p>
+
+                        <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(signal.doc)"></i>
+                            {{signal.doc.fbYes.length}} <i class="fa fa-thumbs-down"
+                                                           data-ng-click="saveDisLike(signal.doc)"></i>
+                            {{signal.doc.fbNo.length}}</p>
                     </div>
                 </div>
+
                 <div class="signal-comment" data-ng-repeat="comment in signal.comments">
                     <img data-ng-src="{{comment.actor.url | kswUrlFilter}}">
 
@@ -49,15 +55,29 @@
                     </div>
                     <div class="bottom">
                         <p>{{comment.published | kswDateDifference}}</p>
-                        <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(comment)"></i> {{comment.fbYes.length}}  <i class="fa fa-thumbs-down" data-ng-click="saveDisLike(comment)"></i> {{comment.fbNo.length}}</p>
+
+                        <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(comment)"></i> {{comment.fbYes.length}} <i
+                                class="fa fa-thumbs-down" data-ng-click="saveDisLike(comment)"></i>
+                            {{comment.fbNo.length}}</p>
                     </div>
                 </div>
 
-                <div class="signal-comment">
+                <div class="new-comment">
                     <img src="{{myPhoto | kswUrlFilter}}">
-                    <div class="message"><textarea placeholder="Write your comment here"></textarea></div>
-                    <div class="bottom">
-                        <a class="button success">Reply</a>
+                    <div class="message"><textarea placeholder="Write your comment here"
+                                                   data-ng-model="signal.newComment.message"></textarea></div>
+                    <div class="new-comment-attachment">
+                        <label data-ng-repeat="attachemnt in signal.newComment.attachemnts">
+                            {{attachemnt.name}}  <i class="fa fa-close" data-ng-click="removeNewCommentAttachment(attachemnt,signal)"></i>
+                        </label>
+                    </div>
+                    <div class="new-comment-bottom">
+                        <div class="button attachment">
+                            <input type="file" name="upload" data-ksw-file-on-change="onCommentAttachmentChange(signal)"
+                                   multiple>
+                        </div>
+                        <a class="button success" data-ng-click="saveNewComment(signal)"><i
+                                class="fa fa-check"></i> Reply</a>
                     </div>
                 </div>
             </div>
