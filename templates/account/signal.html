@@ -81,6 +81,26 @@
                                 class="fa fa-thumbs-down" data-ng-click="saveDisLike(comment)"></i>
                             {{comment.fbNo.length}}</p>
                     </div>
+
+                    <div class="tagged-people" data-ng-if="comment.objectTags.objectTags.length">
+                        <p>PEOPLE TAGGED</p>
+                        <div class="people">
+                            <img title="{{object.objTitle}}" data-ng-repeat="object in comment.objectTags.objectTags" ng-src="{{object.objPicture | kswUrlFilter}}">
+                        </div>
+                    </div>
+
+                    <div class="hash-tag" data-ng-if="comment.objectTags.hashTags.length">
+                        <p>HASH TAGS</p>
+                        <div class="tags">
+                            <span data-ng-repeat="tag in comment.objectTags.hashTags">{{tag.title}}</span>
+                        </div>
+                    </div>
+
+                    <div class="signal-comment-attachment" data-ng-if="comment.attachments.length">
+                        <p>ATTACHMENTS</p>
+                        <a href="{{attachment | kswUrlFilter}}" data-ng-repeat="attachment in comment.attachments"><img src="/assets/img/doc-icons/doc_icon_defult_big.png"></a>
+                    </div>
+
                 </div>
 
                 <div class="new-comment">

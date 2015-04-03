@@ -8344,7 +8344,8 @@ blockquote p {
   .signal-main .signal-content {
     border-bottom: 1px solid #efe7e7;
     min-height: 80px;
-    margin-top: 18px; }
+    margin-top: 18px;
+    margin-bottom: 18px; }
     .signal-main .signal-content img {
       float: left;
       height: 60px;
@@ -8362,7 +8363,10 @@ blockquote p {
     .signal-main .bottom p:nth-child(2) {
       float: right; }
   .signal-main .tagged-people {
-    margin-top: 10px; }
+    margin-top: 10px;
+    width: 100%;
+    overflow: auto;
+    margin-left: 75px; }
     .signal-main .tagged-people p {
       color: gray;
       margin-bottom: 10px;
@@ -8374,7 +8378,10 @@ blockquote p {
       border: 1px solid #e0d5d5;
       margin-bottom: 10px; }
   .signal-main .hash-tag {
-    margin-top: 10px; }
+    margin-top: 10px;
+    width: 100%;
+    overflow: auto;
+    margin-left: 75px; }
     .signal-main .hash-tag p {
       color: gray;
       margin-bottom: 10px;
@@ -8382,9 +8389,11 @@ blockquote p {
     .signal-main .hash-tag span {
       color: #2583ee;
       margin-bottom: 14px;
-      margin-right: 10px; }
+      margin-right: 10px;
+      float: left; }
   .signal-main .signal-content-attachment {
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-left: 75px; }
     .signal-main .signal-content-attachment p {
       color: gray;
       margin-bottom: 10px;
@@ -8407,23 +8416,38 @@ blockquote p {
   .signal-main .userName {
     color: #60a8cd; }
   .signal-main .signal-comment {
-    clear: both;
-    margin-top: 18px; }
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px; }
     .signal-main .signal-comment img {
       height: 50px;
       width: 50px;
-      float: left; }
+      float: left;
+      margin-left: 5px; }
+    .signal-main .signal-comment .signal-comment-attachment {
+      width: 100%;
+      overflow: auto;
+      margin-left: 75px; }
+      .signal-main .signal-comment .signal-comment-attachment p {
+        color: gray;
+        margin-bottom: 10px;
+        font-size: 14px; }
   .signal-main .new-comment {
-    clear: both;
+    width: 100%;
+    overflow: hidden;
     margin-top: 10px; }
     .signal-main .new-comment img {
       height: 50px;
       width: 50px;
       float: left; }
     .signal-main .new-comment .new-comment-attachment {
-      margin-left: 75px; }
+      margin-left: 75px;
+      width: 100%;
+      overflow: hidden; }
       .signal-main .new-comment .new-comment-attachment label {
-        color: #008CBA; }
+        color: #008CBA;
+        float: left;
+        margin-right: 5px; }
         .signal-main .new-comment .new-comment-attachment label i {
           color: red;
           cursor: pointer; }
@@ -8444,7 +8468,8 @@ blockquote p {
           opacity: 0 !important;
           overflow: hidden !important; }
       .signal-main .new-comment .new-comment-bottom a {
-        float: right; }
+        float: right;
+        margin-right: 0; }
 
 .people-picker {
   margin-left: 2px !important;
