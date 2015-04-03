@@ -8345,7 +8345,8 @@ blockquote p {
     border-bottom: 1px solid #efe7e7;
     min-height: 80px;
     margin-top: 18px;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    padding-bottom: 30px; }
     .signal-main .signal-content img {
       float: left;
       height: 60px;
