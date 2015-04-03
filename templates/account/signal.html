@@ -30,20 +30,41 @@
                 </div>
 
                 <div class="signal-content">
-                    <img data-ng-src="{{signal.doc.actor.url | kswUrlFilter}}">
+                    <div class="signal-content-body">
+                        <img data-ng-src="{{signal.doc.actor.url | kswUrlFilter}}">
 
-                    <div class="message">
-                        <span class="userName">{{signal.doc.actor.displayName}} </span>
-                        {{signal.doc.title}}
-                    </div>
-                    <div class="bottom">
-                        <p>{{signal.doc.published | kswDateDifference}}</p>
+                        <div class="message">
+                            <span class="userName">{{signal.doc.actor.displayName}} </span>
+                            {{signal.doc.title}}
+                        </div>
+                        <div class="bottom">
+                            <p>{{signal.doc.published | kswDateDifference}}</p>
 
-                        <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(signal.doc)"></i>
-                            {{signal.doc.fbYes.length}} <i class="fa fa-thumbs-down"
-                                                           data-ng-click="saveDisLike(signal.doc)"></i>
-                            {{signal.doc.fbNo.length}}</p>
+                            <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(signal.doc)"></i>
+                                {{signal.doc.fbYes.length}} <i class="fa fa-thumbs-down"
+                                                               data-ng-click="saveDisLike(signal.doc)"></i>
+                                {{signal.doc.fbNo.length}}</p>
+                        </div>
                     </div>
+                </div>
+
+                <div class="tagged-people" data-ng-if="signal.doc.objectTags.objectTags.length">
+                        <p>PEOPLE TAGGED</p>
+                    <div class="people">
+                        <img title="{{object.objTitle}}" data-ng-repeat="object in signal.doc.objectTags.objectTags" ng-src="{{object.objPicture | kswUrlFilter}}">
+                    </div>
+                </div>
+
+                <div class="hash-tag" data-ng-if="signal.doc.objectTags.hashTags.length">
+                    <p>HASH TAGS</p>
+                    <div class="tags">
+                        <span data-ng-repeat="tag in signal.doc.objectTags.hashTags">{{tag.title}}</span>
+                    </div>
+                </div>
+
+                <div class="signal-content-attachment" data-ng-if="signal.doc.attachments.length">
+                    <p>ATTACHMENTS</p>
+                    <a href="{{attachment | kswUrlFilter}}" data-ng-repeat="attachment in signal.doc.attachments"><img src="/assets/img/doc-icons/doc_icon_defult_big.png"></a>
                 </div>
 
                 <div class="signal-comment" data-ng-repeat="comment in signal.comments">
@@ -67,7 +88,7 @@
                     <div class="message"><textarea placeholder="Write your comment here"
                                                    data-ng-model="signal.newComment.message"></textarea></div>
                     <div class="new-comment-attachment">
-                        <label data-ng-repeat="attachemnt in signal.newComment.attachemnts">
+                        <label data-ng-repeat="attachemnt in signal.newComment.attachments">
                             {{attachemnt.name}}  <i class="fa fa-close" data-ng-click="removeNewCommentAttachment(attachemnt,signal)"></i>
                         </label>
                     </div>

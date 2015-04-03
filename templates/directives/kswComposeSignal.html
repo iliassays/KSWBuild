@@ -2,12 +2,12 @@
         <div class="grid-content">
             <textarea placeholder="Compose Signal..." data-ng-click="showBottomPart()" data-ng-model="signal.content"></textarea>
             <div class="tagged-people" data-ng-if="signal.taggedPeople.length > 0">
-                <img data-ng-src="{{person.smallpicture}}" alt="NA" data-ng-repeat="person in signal.taggedPeople"/>
+                <img data-ng-src="{{person.smallpicture | kswUrlFilter}}" alt="NA" data-ng-repeat="person in signal.taggedPeople"/>
             </div>
 
             <div class="attached-files" data-ng-if="signal.attachments.length > 0">
                 <label data-ng-repeat="attachment in signal.attachments">
-                    {{attachment.fileName}}
+                    {{attachment.name}}
                     <i class="fa fa-close" data-ng-click="removeAttachment(attachment)"></i>
                 </label>
             </div>
@@ -23,7 +23,7 @@
 
             </div>
             <div class="signal-attachment">
-                <input type="file" name="upload" data-ksw-file-on-change="onAttachmentChange()"/>
+                <input type="file" name="upload" data-ksw-file-on-change="onAttachmentChange()" multiple/>
             </div>
             <div class="signal-audience">
                 <a href="#">Audience: <b>All Employees</b></a>

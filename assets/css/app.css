@@ -8270,7 +8270,8 @@ blockquote p {
     resize: none;
     margin-bottom: 0;
     border: none;
-    height: 64px; }
+    height: 64px;
+    overflow: hidden; }
   .compose-signal .tagged-people {
     background-color: white;
     height: 46px; }
@@ -8279,7 +8280,8 @@ blockquote p {
       width: 45px;
       float: left;
       margin-right: 5px;
-      border: 1px solid; }
+      border: 1px solid #e0d5d5;
+      margin-left: 5px; }
   .compose-signal .attached-files {
     float: left;
     padding: 3px;
@@ -8342,7 +8344,11 @@ blockquote p {
   .signal-main .signal-content {
     border-bottom: 1px solid #efe7e7;
     min-height: 80px;
-    padding-bottom: 25px; }
+    margin-top: 18px; }
+    .signal-main .signal-content img {
+      float: left;
+      height: 60px;
+      width: 60px; }
   .signal-main .bottom {
     margin-left: 75px;
     margin-top: 12px;
@@ -8355,10 +8361,40 @@ blockquote p {
       float: left; }
     .signal-main .bottom p:nth-child(2) {
       float: right; }
-  .signal-main img {
-    float: left;
-    height: 60px;
-    width: 60px; }
+  .signal-main .tagged-people {
+    margin-top: 10px; }
+    .signal-main .tagged-people p {
+      color: gray;
+      margin-bottom: 10px;
+      font-size: 14px; }
+    .signal-main .tagged-people .people img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+      border: 1px solid #e0d5d5;
+      margin-bottom: 10px; }
+  .signal-main .hash-tag {
+    margin-top: 10px; }
+    .signal-main .hash-tag p {
+      color: gray;
+      margin-bottom: 10px;
+      font-size: 14px; }
+    .signal-main .hash-tag span {
+      color: #2583ee;
+      margin-bottom: 14px;
+      margin-right: 10px; }
+  .signal-main .signal-content-attachment {
+    margin-top: 10px; }
+    .signal-main .signal-content-attachment p {
+      color: gray;
+      margin-bottom: 10px;
+      font-size: 14px; }
+    .signal-main .signal-content-attachment img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+      border: 1px solid #e0d5d5;
+      margin-bottom: 10px; }
   .signal-main .message {
     margin-left: 75px;
     text-align: justify; }
@@ -8382,7 +8418,8 @@ blockquote p {
     margin-top: 10px; }
     .signal-main .new-comment img {
       height: 50px;
-      width: 50px; }
+      width: 50px;
+      float: left; }
     .signal-main .new-comment .new-comment-attachment {
       margin-left: 75px; }
       .signal-main .new-comment .new-comment-attachment label {
