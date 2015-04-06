@@ -64,7 +64,7 @@
 
                 <div class="signal-content-attachment" data-ng-if="signal.doc.attachments.length">
                     <p>ATTACHMENTS</p>
-                    <a href="{{attachment | kswUrlFilter}}" data-ng-repeat="attachment in signal.doc.attachments"><img src="/assets/img/doc-icons/doc_icon_defult_big.png"></a>
+                    <a href="{{attachment | kswUrlFilter}}" data-ng-repeat="attachment in signal.doc.attachments"><img data-ng-src="{{attachment | kswDocumentIconFilter}}"></a>
                 </div>
 
                 <div class="signal-comment" data-ng-repeat="comment in signal.comments">
@@ -98,7 +98,7 @@
 
                     <div class="signal-comment-attachment" data-ng-if="comment.attachments.length">
                         <p>ATTACHMENTS</p>
-                        <a href="{{attachment | kswUrlFilter}}" data-ng-repeat="attachment in comment.attachments"><img src="/assets/img/doc-icons/doc_icon_defult_big.png"></a>
+                        <a href="{{attachment | kswUrlFilter}}" data-ng-repeat="attachment in comment.attachments"><img data-ng-src="{{attachment | kswDocumentIconFilter}}"></a>
                     </div>
 
                 </div>
