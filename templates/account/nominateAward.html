@@ -1,0 +1,70 @@
+<div class="grid-block horizontal nominate-award-main">
+    <div class="grid-content large-12">
+        <div class="grid-block horizontal">
+            <div class="grid-content large-5">
+                <div class="card custom-card">
+                    <img data-ng-src="{{award.imageUri}}">
+
+                    <div class="card-section custom-section">
+                        <h4>{{award.title}}</h4>
+
+                        <p>{{award.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-content large-3">
+
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <h4>SETTINGS</h4>
+                        </div>
+                    </div>
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <label>Award belongs to:</label>
+                        <select>
+                            <option>Public</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <label>Initial pledge required:</label>
+                        <input type="text" data-ng-model="award.initialPledgeRequired">
+                    </div>
+                </div>
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <label>Who can Pledge:</label>
+                        <select>
+                            <option>Public</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <a class="button success">Add CANDIDATE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-content large-3">
+
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <h4>TAGS</h4>
+                    </div>
+                </div>
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <label>Add Tags:</label>
+                       <span class="inline-label">
+                <input type="text">
+                <a href="#" class="button success">Add</a>
+            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

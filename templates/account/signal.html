@@ -1,0 +1,132 @@
+
+<div class="grid-block horizontal">
+    <div class="grid-content large-5">
+        <div class="grid-block">
+            <div class="grid-content">
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <h4 class="my-name-container">{{myName}}</h4>
+
+                        <p class="my-email">{{myEmail}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-content large-7 small-11">
+        <ksw-compose-signal ksw-signal="signal">
+
+        </ksw-compose-signal>
+
+        <ksw-people-picker>
+
+        </ksw-people-picker>
+
+        <div class="grid-block vertical" style="overflow: hidden">
+            <div class="grid-content signal-main" data-ng-repeat="signal in signals">
+                <div class="signal-header" data-ng-if="signal.doc.updateAreaString" data-ksw-update-string-area
+                     string="{{signal.doc.updateAreaString}}">
+                </div>
+
+                <div class="signal-content">
+                    <div class="signal-content-body">
+                        <img data-ng-src="{{signal.doc.actor.url | kswUrlFilter}}">
+
+                        <div class="message">
+                            <span class="userName">{{signal.doc.actor.displayName}} </span>
+                            {{signal.doc.title}}
+                        </div>
+                        <div class="bottom">
+                            <p>{{signal.doc.published | kswDateDifference}}</p>
+
+                            <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(signal.doc)"></i>
+                                {{signal.doc.fbYes.length}} <i class="fa fa-thumbs-down"
+                                                               data-ng-click="saveDisLike(signal.doc)"></i>
+                                {{signal.doc.fbNo.length}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tagged-people" data-ng-if="signal.doc.objectTags.objectTags.length">
+                        <p>PEOPLE TAGGED</p>
+                    <div class="people">
+                        <img title="{{object.objTitle}}" data-ng-repeat="object in signal.doc.objectTags.objectTags" ng-src="{{object.objPicture | kswUrlFilter}}">
+                    </div>
+                </div>
+
+                <div class="hash-tag" data-ng-if="signal.doc.objectTags.hashTags.length">
+                    <p>HASH TAGS</p>
+                    <div class="tags">
+                        <span data-ng-repeat="tag in signal.doc.objectTags.hashTags">{{tag.title}}</span>
+                    </div>
+                </div>
+
+                <div class="signal-content-attachment" data-ng-if="signal.doc.attachments.length">
+                    <p>ATTACHMENTS</p>
+                    <a href="{{attachment | kswUrlFilter}}" data-ng-repeat="attachment in signal.doc.attachments"><img data-ng-src="{{attachment | kswDocumentIconFilter}}"></a>
+                </div>
+
+                <div class="signal-comment" data-ng-repeat="comment in signal.comments">
+                    <img data-ng-src="{{comment.actor.url | kswUrlFilter}}">
+
+                    <div class="message">
+                        <span class="userName">{{comment.actor.displayName}} </span>
+                        {{comment.title}}
+                    </div>
+                    <div class="bottom">
+                        <p>{{comment.published | kswDateDifference}}</p>
+
+                        <p><i class="fa fa-thumbs-up" data-ng-click="saveLike(comment)"></i> {{comment.fbYes.length}} <i
+                                class="fa fa-thumbs-down" data-ng-click="saveDisLike(comment)"></i>
+                            {{comment.fbNo.length}}</p>
+                    </div>
+
+                    <div class="tagged-people" data-ng-if="comment.objectTags.objectTags.length">
+                        <p>PEOPLE TAGGED</p>
+                        <div class="people">
+                            <img title="{{object.objTitle}}" data-ng-repeat="object in comment.objectTags.objectTags" ng-src="{{object.objPicture | kswUrlFilter}}">
+                        </div>
+                    </div>
+
+                    <div class="hash-tag" data-ng-if="comment.objectTags.hashTags.length">
+                        <p>HASH TAGS</p>
+                        <div class="tags">
+                            <span data-ng-repeat="tag in comment.objectTags.hashTags">{{tag.title}}</span>
+                        </div>
+                    </div>
+
+                    <div class="signal-comment-attachment" data-ng-if="comment.attachments.length">
+                        <p>ATTACHMENTS</p>
+                        <a href="{{attachment | kswUrlFilter}}" data-ng-repeat="attachment in comment.attachments"><img data-ng-src="{{attachment | kswDocumentIconFilter}}"></a>
+                    </div>
+
+                </div>
+
+                <div class="new-comment">
+                    <img src="{{myPhoto | kswUrlFilter}}">
+                    <div class="message"><textarea placeholder="Write your comment here"
+                                                   data-ng-model="signal.newComment.message"></textarea></div>
+                    <div class="new-comment-attachment">
+                        <label data-ng-repeat="attachemnt in signal.newComment.attachments">
+                            {{attachemnt.name}}  <i class="fa fa-close" data-ng-click="removeNewCommentAttachment(attachemnt,signal)"></i>
+                        </label>
+                    </div>
+                    <div class="new-comment-bottom">
+                        <div class="button attachment">
+                            <input type="file" name="upload" data-ksw-file-on-change="onCommentAttachmentChange(signal)"
+                                   multiple>
+                        </div>
+                        <a class="button success" data-ng-click="saveNewComment(signal)"><i
+                                class="fa fa-check"></i> Reply</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-container margin-top-5" data-ng-if="signals">
+                <a class="button success" data-ng-click="loadMoreSignal()">View More Signals</a>
+            </div>
+        </div>
+
+    </div>
+</div>

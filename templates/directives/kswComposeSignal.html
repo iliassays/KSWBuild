@@ -1,0 +1,37 @@
+<div class="grid-block vertical compose-signal">
+        <div class="grid-content">
+            <textarea placeholder="Compose Signal..." data-ng-click="showBottomPart()" data-ng-model="signal.content"></textarea>
+            <div class="tagged-people" data-ng-if="signal.taggedPeople.length > 0">
+                <img data-ng-src="{{person.smallpicture | kswUrlFilter}}" alt="NA" data-ng-repeat="person in signal.taggedPeople"/>
+            </div>
+
+            <div class="attached-files" data-ng-if="signal.attachments.length > 0">
+                <label data-ng-repeat="attachment in signal.attachments">
+                    {{attachment.name}}
+                    <i class="fa fa-close" data-ng-click="removeAttachment(attachment)"></i>
+                </label>
+            </div>
+
+            <div class="signal-attachments">
+            </div>
+        </div>
+        <div class="grid-content signal-bottom">
+            <div class="signal-people-picker" data-ng-click="showPeoplePicker()">
+
+            </div>
+            <div class="signal-connection" data-ng-click="showPeoplePicker()">
+
+            </div>
+            <div class="signal-attachment">
+                <input type="file" name="upload" data-ksw-file-on-change="onAttachmentChange()" multiple/>
+            </div>
+            <div class="signal-audience">
+                <a href="#">Audience: <b>All Employees</b></a>
+            </div>
+            <div class="signal-post-button">
+                <a href="#" class="button warning" ng-click="postSignal(signal)">Post</a>
+            </div>
+        </div>
+</div>
+
+

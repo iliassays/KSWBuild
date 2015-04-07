@@ -1,0 +1,68 @@
+
+<div class=grid-content">
+    <div class="grid-block">
+        <div zf-panel id="sidebar" class="large-2 medium-grid-block sidebar vertical">
+            <div class="grid-content">
+                <a zf-close class="close-button hide-for-medium">&times;</a>
+                <section class="block-list custom-block-list">
+                    <header class="title">Settings</header>
+                    <ul>
+                        <li ui-sref-active="is-active">
+                            <a ui-sref="profile.personalSettings">
+                                <i class="fa fa-user"></i> PERSONAL
+                            </a>
+                        </li>
+                        <li ui-sref-active="is-active">
+                            <a ui-sref="sass">
+                                <i class="fa fa-lock"></i> SECURITY
+                            </a>
+                        </li>
+                        <li ui-sref-active="is-active">
+                            <a ui-sref="motion-ui">
+                                <i class="fa fa-bell-o"></i> NOTIFICATION
+                            </a>
+                        </li>
+                        <li ui-sref-active="is-active">
+                            <a ui-sref="angular">
+                                <i class="fa fa-list"></i> SUBSCRIBERS
+                            </a>
+                        </li>
+                        <li ui-sref-active="is-active">
+                            <a ui-sref="angular-modules">
+                                <i class="fa fa-dashboard"></i> APPS
+                            </a>
+                        </li>
+                        <li ui-sref-active="is-active">
+                            <a ui-sref="touch-gestures">
+                                <i class="fa fa-tree"></i> APP VERSION
+                            </a>
+                        </li>
+                        <li ui-sref-active="is-active">
+                            <a ui-sref="compatibility">
+                                <i class="fa fa-cog"></i> SETTINGS B
+                            </a>
+                        </li>
+                        <li ui-sref-active="is-active">
+                            <a ui-sref="changelog">
+                                <i class="fa fa-cogs"></i> SETTINGS C
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="large-10 grid-content" ng-show="$state.current.name.length">
+            <div class="grid-container main-docs-section">
+                <a class="small secondary expand button hide-for-medium" zf-toggle="sidebar">Show Components</a>
+
+                <div ng-class="ui-animation" ui-view></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,53 @@
+<div class="grid-block horizontal">
+    <div class="grid-content large-12">
+        <div class="grid-block vertical">
+            <div class="grid-content">
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <a class="button success" ui-sref="myProfile.selectAward">NOMINATE AN AWARD</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-content network-container-results">
+                <div class="grid-block">
+                    <div class="grid-content large-4 small-11 network-container">
+                        <h4>NOMINATED FOR {{totalNominatedAward}}</h4>
+                        <div class="card custom-network-container-card"
+                             data-ng-repeat="nominatedAward in nominatedAwards "
+                             data-ng-click="toggleSelectPeople(nominatedAward)">
+                            <div class="grid-block">
+                                <div class="grid-content shrink">
+                                    <img ng-src="{{nominatedAward.image}}">
+                                </div>
+                                <div class="grid-content wrap collapse">
+                                    <p>
+                                        {{nominatedAward.title}}
+                                    </p>
+
+                                    <p class="email-container">
+                                        {{nominatedAward.description}}
+                                    <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-content large-4 small-11">
+                        <h4>AWARDED FOR {{totalAwards}}</h4>
+
+                        <div class="card" style="width: 235px"
+                             data-ng-repeat="award in awards"
+                             data-ng-click="toggleSelectPeople(award)">
+                            <img ng-src="{{award.image}}">
+                            <div class="card-section" style="text-align: center">
+                                <h4>{{award.title}}</h4>
+                                <p>{{award.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

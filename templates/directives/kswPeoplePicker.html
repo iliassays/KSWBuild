@@ -1,0 +1,57 @@
+<div class="grid-block vertical people-picker" data-ng-if="peoplePickerFlag">
+    <div class="grid-content">
+        <div class="grid-block">
+            <div class="grid-content large-6 small-11">
+                <select ng-model="selectedPeoplePickerGroup"
+                        ng-selected="0"
+                        ng-options="group as group.value for group in peoplePickerGroups"
+                        data-ng-change="updatePeoplePickerResults(selectedPeoplePickerGroup)">
+                </select>
+            </div>
+           <div class="grid-content large-6 small-11">
+               <span class="inline-label">
+                <input type="search"
+                       data-ng-model="peopleSearchText"
+                       placeholder="Search people....."
+                       data-ng-keyup="$event.keyCode == 13 ? findPeople(peopleSearchText) : null">
+                <a href="#" class="button" data-ng-click="findPeople(peopleSearchText)">Search</a>
+            </span>
+           </div>
+        </div>
+    </div>
+
+    <div class="grid-content people-picker-results">
+        <div class="grid-block">
+            <div data-ng-repeat="(groupName,groupValue) in selectedGroup" class="grid-content large-6 small-11">
+                <div data-ng-if="groupValue.length > 0">
+                    <h4>{{groupName | capitalize}}</h4>
+                    <div class="card custom-people-picker-card"
+                         data-ng-repeat="person in groupValue | filter: peopleSearchText"
+                         data-ng-class="{ 'selected-card': person.isSelected }"
+                         data-ng-click="toggleSelectPeople(person)">
+                        <div class="grid-block">
+                            <div class="grid-content shrink collapse">
+                                <img ng-src="{{person.smallpicture | kswUrlFilter}}">
+                            </div>
+                            <div class="grid-content wrap collapse">
+                                <p title="{{person.title}}">{{person.title}}</p>
+                                <p class="email-container" title="{{person.email}}">{{person.email}}<p>
+                            </div>
+                        </div>
+                        <!--<div class="grid-content shrink collapse">-->
+                            <!--<div class="grid-content wrap collapse">-->
+                                <!---->
+                            <!--</div>-->
+                            <!--<div class="grid-content">-->
+                                <!---->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container" style="margin-top: 8px">
+        <a href="" class="button warning"  data-ng-click="hidePeoplePicker()">Close</a>
+    </div>
+</div>
