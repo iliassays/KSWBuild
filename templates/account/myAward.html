@@ -18,7 +18,7 @@
                              data-ng-click="toggleSelectPeople(nominatedAward)">
                             <div class="grid-block">
                                 <div class="grid-content shrink">
-                                    <img ng-src="{{nominatedAward.image}}">
+                                    <img ng-src="{{nominatedAward.image | kswUrlFilter}}">
                                 </div>
                                 <div class="grid-content wrap collapse">
                                     <p>
@@ -39,7 +39,7 @@
                         <div class="card" style="width: 235px"
                              data-ng-repeat="award in awards"
                              data-ng-click="toggleSelectPeople(award)">
-                            <img ng-src="{{award.image}}">
+                            <img data-ng-src="{{award.imageUri | kswUrlFilter}}">
                             <div class="card-section" style="text-align: center">
                                 <h4>{{award.title}}</h4>
                                 <p>{{award.description}}</p>

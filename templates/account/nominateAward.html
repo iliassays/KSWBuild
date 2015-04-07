@@ -3,7 +3,7 @@
         <div class="grid-block horizontal">
             <div class="grid-content large-5">
                 <div class="card custom-card">
-                    <img data-ng-src="{{award.imageUri}}">
+                    <img data-ng-src="{{award.imageUri | kswUrlFilter}}">
 
                     <div class="card-section custom-section">
                         <h4>{{award.title}}</h4>

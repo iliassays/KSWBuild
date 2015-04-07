@@ -30,7 +30,7 @@
                              data-ng-repeat="person in groupValue | filter: peopleSearchText">
                             <div class="grid-block">
                                 <div class="grid-content shrink">
-                                    <img ng-src="{{person.smallpicture}}">
+                                    <img ng-src="{{person.smallpicture | kswUrlFilter}}">
                                 </div>
                                 <div class="grid-content wrap collapse">
                                     <p title="{{person.title}}">{{person.title}}</p>

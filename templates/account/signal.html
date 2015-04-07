@@ -31,12 +31,18 @@
 
                 <div class="signal-content">
                     <div class="signal-content-body">
-                        <img data-ng-src="{{signal.doc.actor.url | kswUrlFilter}}">
-
-                        <div class="message">
+                        <img data-ng-src="{{signal.doc.actor.url | kswUrlFilter}}" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
+                        <img data-ng-src="{{signal.doc.target.id.imgSrc | kswUrlFilter}}" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
+                        <div class="message" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
                             <span class="userName">{{signal.doc.actor.displayName}} </span>
-                            {{signal.doc.title}}
+                           {{signal.doc.title}}
                         </div>
+
+                        <div class="message" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
+                            <span class="userName">{{signal.doc.target.id.firstName + signal.doc.target.id.lastName}} </span>
+                            nominated by  {{signal.doc.actor.displayName}} for {{signal.doc.object.templateId.title}}. Needs {{signal.doc.object.templateId.initialPledgeRequired}} total pledges.
+                        </div>
+
                         <div class="bottom">
                             <p>{{signal.doc.published | kswDateDifference}}</p>
 
@@ -47,6 +53,24 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="activity-type" data-ng-if="signal.doc.activityType == 'Space-Text-Create'">
+                        <img src="/assets/img/doc-icons/doc_icon.png">
+                    <p>{{signal.doc.spaceId.spaceName}}</p>
+                </div>
+
+                <div class="activity-type" data-ng-if="signal.doc.activityType == 'Composed-Space'">
+                    <img src="/assets/img/doc-icons/space_icon.png">
+                    <p>{{signal.doc.spaceId.spaceName}}</p>
+                </div>
+
+                <div class="activity-type" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
+                    <img data-ng-src="{{signal.doc.object.templateId.imageUri | kswUrlFilter}}">
+                    <p class="award-title">{{signal.doc.object.templateId.title}}</p>
+                    <p class="award-status">Status: {{signal.doc.object.trackId.status}}</p>
+                </div>
+
+
 
                 <div class="tagged-people" data-ng-if="signal.doc.objectTags.objectTags.length">
                         <p>PEOPLE TAGGED</p>

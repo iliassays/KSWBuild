@@ -8433,6 +8433,26 @@ blockquote p {
         color: gray;
         margin-bottom: 10px;
         font-size: 14px; }
+  .signal-main .activity-type {
+    margin-bottom: 18px;
+    border: 1px solid #B6ABAB;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer; }
+    .signal-main .activity-type:hover {
+      border: 1px solid #000000; }
+    .signal-main .activity-type img {
+      float: left;
+      height: 75px; }
+    .signal-main .activity-type .award-title {
+      margin-top: 10px; }
+    .signal-main .activity-type .award-status {
+      font-size: 14px;
+      color: gray; }
+    .signal-main .activity-type p {
+      margin-left: 88px;
+      text-align: justify;
+      margin-bottom: 0px; }
   .signal-main .new-comment {
     width: 100%;
     overflow: hidden;

@@ -7,7 +7,7 @@
                     <div data-ng-repeat="(groupName,groupValue) in awardsGroup" class="grid-content large-3 small-11">
                         <h4>{{groupName | capitalize}}</h4>
                         <div class="card custom-card" data-ng-repeat="award in groupValue" data-ng-click="onAwardSelect(award)">
-                            <img ng-src="{{award.imageUri}}">
+                            <img ng-src="{{award.imageUri | kswUrlFilter}}">
                             <div class="card-section custom-section">
                                 {{award.title}}
                             </div>
