@@ -69,6 +69,15 @@
                     <p>{{signal.doc.spaceId.spaceName}}</p>
                 </div>
 
+                <div class="activity-type" data-ng-if="signal.doc.activityType == 'Space-WebLink-Create'"
+                     data-ksw-web-link url="{{signal.doc.spaceId.fileUrl}}">
+
+                    <img data-ng-src="{{signal.doc.spaceId.imgSrc}}">
+
+                    <p>{{signal.doc.spaceId.spaceName}}</p>
+
+                </div>
+
                 <div class="activity-type" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
                     <img data-ng-src="{{signal.doc.object.templateId.imageUri | kswUrlFilter}}">
                     <p class="award-title">{{signal.doc.object.templateId.title}}</p>
