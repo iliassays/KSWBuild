@@ -8408,6 +8408,13 @@ blockquote p {
   .signal-main .message {
     margin-left: 75px;
     text-align: justify; }
+    .signal-main .message a.read-more, .signal-main .message a.read-less {
+      cursor: pointer;
+      color: blue; }
+    .signal-main .message span.more-text {
+      display: none; }
+    .signal-main .message span.more-text.show {
+      display: inline !important; }
   .signal-main .signal-header {
     background-color: #f4ead9;
     padding: 1rem;

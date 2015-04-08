@@ -33,9 +33,14 @@
                     <div class="signal-content-body">
                         <img data-ng-src="{{signal.doc.actor.url | kswUrlFilter}}" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
                         <img data-ng-src="{{signal.doc.target.id.imgSrc | kswUrlFilter}}" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
+
                         <div class="message" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
-                            <span class="userName">{{signal.doc.actor.displayName}} </span>
-                           {{signal.doc.title}}
+                           <p>
+                               <span class="userName">{{signal.doc.actor.displayName}} </span>
+                               <span data-ksw-read-more data-content="{{signal.doc.title}}">
+
+                               </span>
+                           </p>
                         </div>
 
                         <div class="message" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
@@ -95,8 +100,12 @@
                     <img data-ng-src="{{comment.actor.url | kswUrlFilter}}">
 
                     <div class="message">
-                        <span class="userName">{{comment.actor.displayName}} </span>
-                        {{comment.title}}
+                        <p>
+                            <span class="userName">{{comment.actor.displayName}} </span>
+                               <span data-ksw-read-more data-content="{{comment.title}}">
+
+                               </span>
+                        </p>
                     </div>
                     <div class="bottom">
                         <p>{{comment.published | kswDateDifference}}</p>
