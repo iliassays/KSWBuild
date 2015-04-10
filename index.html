@@ -58,6 +58,9 @@
 </head>
 <body>
 <zf-notification-set id="main-notifications" position="top-right"></zf-notification-set>
+<div zf-modal="" id="loaderModal" overlay-close="false">
+    <p style="text-align: center"><img src="/assets/img/ajax-loader.gif" alt="Loader"/></p>
+</div>
 <div class="grid-frame vertical">
     <div class="grid-content shrink" data-ng-class="{ 'ksw-header': isLoggedIn }" ng-controller="NavigationCtrl">
         <div class="menu-group site-header" data-ng-if="isLoggedIn">
@@ -86,7 +89,7 @@
                     </li>
 
                     <li class="background-color-message-menu-item">
-                        <a href="#">
+                        <a ui-sref="myProfile.chat">
                             <img zf-iconic="" icon="envelope" size="medium" class="iconic-color-success">
                         </a>
                     </li>

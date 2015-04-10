@@ -8703,3 +8703,6 @@ blockquote p {
 
 body {
   background: #12766c url("/assets/img/main-background.jpg"); }
+
+.modal {
+  background-color: transparent !important; }
