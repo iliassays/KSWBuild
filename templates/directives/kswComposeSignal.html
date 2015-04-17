@@ -1,8 +1,9 @@
 <div class="grid-block vertical compose-signal">
         <div class="grid-content">
             <textarea placeholder="Compose Signal..." data-ng-click="showBottomPart()" data-ng-model="signal.content"></textarea>
+
             <div class="tagged-people" data-ng-if="signal.taggedPeople.length > 0">
-                <img data-ng-src="{{person.smallpicture | kswUrlFilter}}" alt="NA" data-ng-repeat="person in signal.taggedPeople"/>
+                <img alt="NA" data-ng-repeat="person in signal.taggedPeople" data-ng-src="{{person | kswImageFilter: 46:person.id}}"/>
             </div>
 
             <div class="attached-files" data-ng-if="signal.attachments.length > 0">

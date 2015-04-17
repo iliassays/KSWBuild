@@ -31,21 +31,13 @@
                          data-ng-click="toggleSelectPeople(person)">
                         <div class="grid-block">
                             <div class="grid-content shrink collapse">
-                                <img ng-src="{{person.smallpicture | kswUrlFilter}}">
+                                <img ng-src="{{person | kswImageFilter: 101:person.id}}">
                             </div>
                             <div class="grid-content wrap collapse">
                                 <p title="{{person.title}}">{{person.title}}</p>
                                 <p class="email-container" title="{{person.email}}">{{person.email}}<p>
                             </div>
                         </div>
-                        <!--<div class="grid-content shrink collapse">-->
-                            <!--<div class="grid-content wrap collapse">-->
-                                <!---->
-                            <!--</div>-->
-                            <!--<div class="grid-content">-->
-                                <!---->
-                            <!--</div>-->
-                        <!--</div>-->
                     </div>
                 </div>
             </div>

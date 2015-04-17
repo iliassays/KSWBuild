@@ -1,9 +1,9 @@
 @charset "UTF-8";
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
  */
 html {
   font-family: sans-serif;
@@ -23,7 +23,8 @@ body {
    ========================================================================== */
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 article,
@@ -35,6 +36,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -63,7 +65,7 @@ audio:not([controls]) {
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
 [hidden],
 template {
@@ -75,10 +77,11 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent; }
+  background-color: transparent; }
 
 /**
- * Improve readability when focused and also mouse hovered in all browsers.
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
  */
 a:active,
 a:hover {
@@ -290,14 +293,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  /* 2 */
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  /* 2 */ }
 
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -4537,34 +4539,6 @@ meter {
 /*
   Transitions
 */
-.slideInDown.ng-enter, .slideInDown.ng-hide-remove {
-  transition-duration: 500ms;
-  transition-timing-function: ease;
-  transition-delay: 0;
-  transition-property: -webkit-transform, opacity;
-  transition-property: transform, opacity;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%); }
-.slideInDown.ng-enter.ng-enter-active, .slideInDown.ng-hide-remove.ng-hide-remove-active {
-  -webkit-transform: translateX(0) translateY(0);
-          transform: translateX(0) translateY(0); }
-
-.slideInLeft.ng-enter, .slideInLeft.ng-hide-remove {
-  transition-duration: 500ms;
-  transition-timing-function: ease;
-  transition-delay: 0;
-  transition-property: -webkit-transform, opacity;
-  transition-property: transform, opacity;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%); }
-.slideInLeft.ng-enter.ng-enter-active, .slideInLeft.ng-hide-remove.ng-hide-remove-active {
-  -webkit-transform: translateX(0) translateY(0);
-          transform: translateX(0) translateY(0); }
-
 .slideInUp.ng-enter, .slideInUp.ng-hide-remove {
   transition-duration: 500ms;
   transition-timing-function: ease;
@@ -4593,7 +4567,35 @@ meter {
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideOutBottom.ng-leave, .slideOutBottom.ng-hide-add {
+.slideInDown.ng-enter, .slideInDown.ng-hide-remove {
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
+.slideInDown.ng-enter.ng-enter-active, .slideInDown.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0); }
+
+.slideInLeft.ng-enter, .slideInLeft.ng-hide-remove {
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%); }
+.slideInLeft.ng-enter.ng-enter-active, .slideInLeft.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0); }
+
+.slideOutUp.ng-leave, .slideOutUp.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4603,9 +4605,9 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
-.slideOutBottom.ng-leave.ng-leave-active, .slideOutBottom.ng-hide-add.ng-hide-add-active {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%); }
+.slideOutUp.ng-leave.ng-leave-active, .slideOutUp.ng-hide-add.ng-hide-add-active {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
 
 .slideOutRight.ng-leave, .slideOutRight.ng-hide-add {
   transition-duration: 500ms;
@@ -4621,7 +4623,7 @@ meter {
   -webkit-transform: translateX(100%);
           transform: translateX(100%); }
 
-.slideOutUp.ng-leave, .slideOutUp.ng-hide-add {
+.slideOutDown.ng-leave, .slideOutDown.ng-hide-add {
   transition-duration: 500ms;
   transition-timing-function: ease;
   transition-delay: 0;
@@ -4631,9 +4633,9 @@ meter {
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
-.slideOutUp.ng-leave.ng-leave-active, .slideOutUp.ng-hide-add.ng-hide-add-active {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%); }
+.slideOutDown.ng-leave.ng-leave-active, .slideOutDown.ng-hide-add.ng-hide-add-active {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%); }
 
 .slideOutLeft.ng-leave, .slideOutLeft.ng-hide-add {
   transition-duration: 500ms;
@@ -8300,15 +8302,17 @@ blockquote p {
     height: 64px;
     overflow: hidden; }
   .compose-signal .tagged-people {
-    background-color: white;
-    height: 46px; }
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding-bottom: 4px; }
     .compose-signal .tagged-people img {
       height: 45px;
       width: 45px;
       float: left;
-      margin-right: 5px;
       border: 1px solid #e0d5d5;
-      margin-left: 5px; }
+      margin: 5px; }
   .compose-signal .attached-files {
     float: left;
     padding: 3px;
@@ -8487,10 +8491,21 @@ blockquote p {
       height: 50px;
       width: 50px;
       float: left; }
-    .signal-main .new-comment .new-comment-attachment {
+    .signal-main .new-comment .new-comment-people-tagged {
       margin-left: 75px;
       width: 100%;
       overflow: hidden; }
+      .signal-main .new-comment .new-comment-people-tagged img {
+        float: left;
+        height: 40px;
+        width: 40px;
+        margin-right: 5px;
+        margin-bottom: 3px; }
+    .signal-main .new-comment .new-comment-attachment {
+      margin-left: 75px;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 10px; }
       .signal-main .new-comment .new-comment-attachment label {
         color: #008CBA;
         float: left;
@@ -8519,10 +8534,13 @@ blockquote p {
         margin-right: 0; }
 
 .people-picker {
-  margin-left: 2px !important;
-  margin-top: 4px;
   background: #E4E9EC;
-  padding: 4px; }
+  padding: 4px;
+  z-index: 1;
+  position: absolute;
+  margin: 4px !important;
+  margin-top: -18px !important;
+  border: 2px solid #aba9a9; }
   .people-picker img {
     float: left;
     height: 100px;
@@ -8591,9 +8609,6 @@ blockquote p {
       overflow: hidden;
       padding: 10px;
       font-size: 12px; }
-    @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-      .network-container .custom-network-container-card .email-container {
-        width: 100%; } }
   .network-container .selected-card {
     border: 2px solid green; }
 
@@ -8674,6 +8689,72 @@ blockquote p {
 
 .margin-top-5 {
   margin-top: 5px; }
+
+.conversation-user-block-list {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff; }
+  .conversation-user-block-list .custom-header {
+    margin: 0;
+    padding: 19px;
+    color: #ffffff; }
+  .conversation-user-block-list .history {
+    overflow-y: auto; }
+    .conversation-user-block-list .history .message-history {
+      padding: 4px;
+      border-bottom: 1px solid #dad1d2;
+      min-height: 68px;
+      cursor: pointer; }
+      .conversation-user-block-list .history .message-history:hover {
+        background-color: rgba(235, 236, 189, 0.55); }
+      .conversation-user-block-list .history .message-history img {
+        float: left;
+        height: 60px;
+        width: 60px; }
+      .conversation-user-block-list .history .message-history .content {
+        margin-left: 80px; }
+      .conversation-user-block-list .history .message-history .email {
+        color: #43b8ea;
+        font-size: 12px;
+        margin-top: 5px; }
+  .conversation-user-block-list .conversation-header-background {
+    background-color: #D28842; }
+  .conversation-user-block-list .message-header-background {
+    background-color: #E77509; }
+  .conversation-user-block-list .people-header-background {
+    background-color: #B73A1E; }
+
+.conversation .newMessage {
+  display: inline-block;
+  position: relative;
+  width: 100%; }
+  .conversation .newMessage a {
+    position: absolute;
+    bottom: 0px;
+    right: 0px; }
+  .conversation .newMessage textarea {
+    border: 1.5px solid #a8a3a3;
+    height: 100px;
+    margin-bottom: -2px; }
+
+.mini-people-picker {
+  position: absolute;
+  z-index: 1;
+  margin-top: -16px;
+  background-color: whitesmoke; }
+  .mini-people-picker .result {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    cursor: pointer; }
+    .mini-people-picker .result:hover {
+      background-color: #ffffff;
+      border: 1px dotted #694948; }
+    .mini-people-picker .result img {
+      float: left;
+      height: 30px;
+      margin-right: 10px;
+      width: 30px; }
 
 .ksw-header {
   padding: 2rem;

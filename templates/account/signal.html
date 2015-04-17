@@ -31,8 +31,8 @@
 
                 <div class="signal-content">
                     <div class="signal-content-body">
-                        <img data-ng-src="{{signal.doc.actor.url | kswUrlFilter}}" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
-                        <img data-ng-src="{{signal.doc.target.id.imgSrc | kswUrlFilter}}" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
+                        <img data-ng-src="{{signal.doc.actor.url | kswImageFilter: 60:signal.doc.actor.userId}}" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
+                        <img data-ng-src="{{signal.doc.target.id.imgSrc | kswImageFilter: 60:signal.doc.actor.userId}}" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
 
                         <div class="message" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
                            <p>
@@ -84,12 +84,11 @@
                     <p class="award-status">Status: {{signal.doc.object.trackId.status}}</p>
                 </div>
 
-
-
                 <div class="tagged-people" data-ng-if="signal.doc.objectTags.objectTags.length">
                         <p>PEOPLE TAGGED</p>
                     <div class="people">
-                        <img title="{{object.objTitle}}" data-ng-repeat="object in signal.doc.objectTags.objectTags" ng-src="{{object.objPicture | kswUrlFilter}}">
+                        <img title="{{object.objTitle}}" data-ng-repeat="object in signal.doc.objectTags.objectTags" ng-src="{{object | kswImageFilter: 40:object.objId}}">
+                        <!--<img title="{{object.objTitle}}" data-ng-repeat="object in signal.doc.objectTags.objectTags" ng-src="{{object.objPicture | kswUrlFilter}}">-->
                     </div>
                 </div>
 
@@ -106,7 +105,7 @@
                 </div>
 
                 <div class="signal-comment" data-ng-repeat="comment in signal.comments">
-                    <img data-ng-src="{{comment.actor.url | kswUrlFilter}}">
+                    <img data-ng-src="{{comment.actor | kswImageFilter: 60:comment.actor.userId}}">
 
                     <div class="message">
                         <p>
@@ -127,7 +126,7 @@
                     <div class="tagged-people" data-ng-if="comment.objectTags.objectTags.length">
                         <p>PEOPLE TAGGED</p>
                         <div class="people">
-                            <img title="{{object.objTitle}}" data-ng-repeat="object in comment.objectTags.objectTags" ng-src="{{object.objPicture | kswUrlFilter}}">
+                            <img title="{{object.objTitle}}" data-ng-repeat="object in comment.objectTags.objectTags" ng-src="{{object | kswImageFilter: 40:object.objId}}">
                         </div>
                     </div>
 
@@ -146,9 +145,26 @@
                 </div>
 
                 <div class="new-comment">
-                    <img src="{{myPhoto | kswUrlFilter}}">
-                    <div class="message"><textarea placeholder="Write your comment here"
-                                                   data-ng-model="signal.newComment.message"></textarea></div>
+                    <img src="{{currentUserId | kswImageFilter: 250:currentUserId}}">
+                    <div class="message">
+                        <textarea
+                                placeholder="Write your comment here"
+                                data-ng-model="signal.newComment.message"
+                                data-ng-keypress="($event.which === 64)?showMiniPeoplePickerInComment($event,signal.newComment):0"
+                                data-ng-keyup="($event.which === 8)? signal.newComment.showMiniPeoplePicker = false : 0"></textarea>
+
+                        <ksw-mini-people-picker
+                                data-people="signal.newComment.people"
+                                data-ng-if="signal.newComment.showMiniPeoplePicker"
+                                data-comment="signal.newComment">
+
+                        </ksw-mini-people-picker>
+                    </div>
+
+                    <div class="new-comment-people-tagged" data-ng-if="signal.newComment.taggedPeople.length">
+                        <img data-ng-src="{{person.picture | kswUrlFilter}}" alt="{{person.title}}" title="{{person.title}}" data-ng-repeat="person in signal.newComment.taggedPeople"/>
+                    </div>
+
                     <div class="new-comment-attachment">
                         <label data-ng-repeat="attachemnt in signal.newComment.attachments">
                             {{attachemnt.name}}  <i class="fa fa-close" data-ng-click="removeNewCommentAttachment(attachemnt,signal)"></i>

@@ -89,7 +89,7 @@
                     </li>
 
                     <li class="background-color-message-menu-item">
-                        <a ui-sref="myProfile.chat">
+                        <a href="/chat">
                             <img zf-iconic="" icon="envelope" size="medium" class="iconic-color-success">
                         </a>
                     </li>
@@ -116,7 +116,7 @@
                                     <div class="grid-block horizontal content-menu-main">
 
                                         <div class="content-menu-content" data-ng-click="changePersonalAccount()">
-                                            <img data-ng-src="{{getPictureUrl(personalAccountInfo.imgSrc)}}">
+                                            <img data-ng-src="{{personalAccountInfo | kswImageFilter: 113:personalAccountInfo.accountId}}">
                                             <p>{{userName}}</p>
                                             <p>Personal Account</p>
                                         </div>
@@ -124,7 +124,7 @@
                                         <div data-ng-repeat="connection in corporateConnections"
                                              data-ng-click="changeAccountType(connection)"
                                              class="content-menu-content">
-                                            <img data-ng-src="{{getPictureUrl(connection.smallpicture)}}">
+                                            <img data-ng-src="{{getPictureUrl(connection.picture)}}">
                                             <p>{{userName}}</p>
 
                                             <p>{{connection.title}}</p>
