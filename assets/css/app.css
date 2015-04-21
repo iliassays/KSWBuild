@@ -3802,12 +3802,18 @@ meter {
   margin: 0;
   list-style-type: none; }
   .menu-bar > li {
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+            flex: 1 0 0;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
     .menu-bar > li > a {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -3868,6 +3874,10 @@ meter {
       Stretch
     */ }
     .menu-bar > li > a, .menu-bar.horizontal > li > a {
+      -webkit-flex: 1 0 0;
+          -ms-flex: 1 0 0;
+              flex: 1 0 0; }
+    .menu-bar > li > a, .menu-bar.horizontal > li > a {
       -webkit-flex-flow: column nowrap;
           -ms-flex-flow: column nowrap;
               flex-flow: column nowrap; }
@@ -3881,6 +3891,10 @@ meter {
     /*
       Stretch
     */ }
+    .menu-bar.vertical > li {
+      -webkit-flex: 1 0 auto;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto; }
     .menu-bar.vertical > li > a {
       -webkit-flex-flow: row nowrap;
           -ms-flex-flow: row nowrap;
@@ -4003,6 +4017,10 @@ meter {
       Stretch
     */ }
     .menu-bar.small-horizontal > li > a {
+      -webkit-flex: 1 0 0;
+          -ms-flex: 1 0 0;
+              flex: 1 0 0; }
+    .menu-bar.small-horizontal > li > a {
       -webkit-flex-flow: column nowrap;
           -ms-flex-flow: column nowrap;
               flex-flow: column nowrap; }
@@ -4016,6 +4034,10 @@ meter {
     /*
       Stretch
     */ }
+    .menu-bar.small-vertical > li {
+      -webkit-flex: 1 0 auto;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto; }
     .menu-bar.small-vertical > li > a {
       -webkit-flex-flow: row nowrap;
           -ms-flex-flow: row nowrap;
@@ -4033,6 +4055,10 @@ meter {
         Stretch
       */ }
       .menu-bar.medium-horizontal > li > a {
+        -webkit-flex: 1 0 0;
+            -ms-flex: 1 0 0;
+                flex: 1 0 0; }
+      .menu-bar.medium-horizontal > li > a {
         -webkit-flex-flow: column nowrap;
             -ms-flex-flow: column nowrap;
                 flex-flow: column nowrap; }
@@ -4046,6 +4072,10 @@ meter {
       /*
         Stretch
       */ }
+      .menu-bar.medium-vertical > li {
+        -webkit-flex: 1 0 auto;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto; }
       .menu-bar.medium-vertical > li > a {
         -webkit-flex-flow: row nowrap;
             -ms-flex-flow: row nowrap;
@@ -4063,6 +4093,10 @@ meter {
         Stretch
       */ }
       .menu-bar.large-horizontal > li > a {
+        -webkit-flex: 1 0 0;
+            -ms-flex: 1 0 0;
+                flex: 1 0 0; }
+      .menu-bar.large-horizontal > li > a {
         -webkit-flex-flow: column nowrap;
             -ms-flex-flow: column nowrap;
                 flex-flow: column nowrap; }
@@ -4076,6 +4110,10 @@ meter {
       /*
         Stretch
       */ }
+      .menu-bar.large-vertical > li {
+        -webkit-flex: 1 0 auto;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto; }
       .menu-bar.large-vertical > li > a {
         -webkit-flex-flow: row nowrap;
             -ms-flex-flow: row nowrap;
@@ -4084,6 +4122,8 @@ meter {
     margin: 0;
     width: 22px;
     height: 22px; }
+    .menu-bar > li > img:first-child:last-child, .menu-bar > li > .iconic:first-child:last-child, .menu-bar.icon-top > li > img:first-child:last-child, .menu-bar.icon-top > li > .iconic:first-child:last-child {
+      margin: 0; }
   .menu-bar > li > a, .menu-bar.icon-top > li > a {
     -webkit-flex-flow: column nowrap;
         -ms-flex-flow: column nowrap;
@@ -4094,6 +4134,8 @@ meter {
     margin: 0;
     width: 22px;
     height: 22px; }
+    .menu-bar.icon-right > li > img:first-child:last-child, .menu-bar.icon-right > li > .iconic:first-child:last-child {
+      margin: 0; }
   .menu-bar.icon-right > li > a {
     -webkit-flex-flow: row-reverse nowrap;
         -ms-flex-flow: row-reverse nowrap;
@@ -4104,6 +4146,8 @@ meter {
     margin: 0;
     width: 22px;
     height: 22px; }
+    .menu-bar.icon-bottom > li > img:first-child:last-child, .menu-bar.icon-bottom > li > .iconic:first-child:last-child {
+      margin: 0; }
   .menu-bar.icon-bottom > li > a {
     -webkit-flex-flow: column-reverse nowrap;
         -ms-flex-flow: column-reverse nowrap;
@@ -4114,6 +4158,8 @@ meter {
     margin: 0;
     width: 22px;
     height: 22px; }
+    .menu-bar.icon-left > li > img:first-child:last-child, .menu-bar.icon-left > li > .iconic:first-child:last-child {
+      margin: 0; }
   .menu-bar.icon-left > li > a {
     -webkit-flex-flow: row nowrap;
         -ms-flex-flow: row nowrap;
@@ -4127,6 +4173,8 @@ meter {
     margin: 0;
     width: 22px;
     height: 22px; }
+    .menu-bar.small-icon-top > li > img:first-child:last-child, .menu-bar.small-icon-top > li > .iconic:first-child:last-child {
+      margin: 0; }
   .menu-bar.small-icon-top > li > a {
     -webkit-flex-flow: column nowrap;
         -ms-flex-flow: column nowrap;
@@ -4137,6 +4185,8 @@ meter {
     margin: 0;
     width: 22px;
     height: 22px; }
+    .menu-bar.small-icon-right > li > img:first-child:last-child, .menu-bar.small-icon-right > li > .iconic:first-child:last-child {
+      margin: 0; }
   .menu-bar.small-icon-right > li > a {
     -webkit-flex-flow: row-reverse nowrap;
         -ms-flex-flow: row-reverse nowrap;
@@ -4147,6 +4197,8 @@ meter {
     margin: 0;
     width: 22px;
     height: 22px; }
+    .menu-bar.small-icon-bottom > li > img:first-child:last-child, .menu-bar.small-icon-bottom > li > .iconic:first-child:last-child {
+      margin: 0; }
   .menu-bar.small-icon-bottom > li > a {
     -webkit-flex-flow: column-reverse nowrap;
         -ms-flex-flow: column-reverse nowrap;
@@ -4157,6 +4209,8 @@ meter {
     margin: 0;
     width: 22px;
     height: 22px; }
+    .menu-bar.small-icon-left > li > img:first-child:last-child, .menu-bar.small-icon-left > li > .iconic:first-child:last-child {
+      margin: 0; }
   .menu-bar.small-icon-left > li > a {
     -webkit-flex-flow: row nowrap;
         -ms-flex-flow: row nowrap;
@@ -4171,6 +4225,8 @@ meter {
       margin: 0;
       width: 22px;
       height: 22px; }
+      .menu-bar.medium-icon-top > li > img:first-child:last-child, .menu-bar.medium-icon-top > li > .iconic:first-child:last-child {
+        margin: 0; }
     .menu-bar.medium-icon-top > li > a {
       -webkit-flex-flow: column nowrap;
           -ms-flex-flow: column nowrap;
@@ -4182,6 +4238,8 @@ meter {
       margin: 0;
       width: 22px;
       height: 22px; }
+      .menu-bar.medium-icon-right > li > img:first-child:last-child, .menu-bar.medium-icon-right > li > .iconic:first-child:last-child {
+        margin: 0; }
     .menu-bar.medium-icon-right > li > a {
       -webkit-flex-flow: row-reverse nowrap;
           -ms-flex-flow: row-reverse nowrap;
@@ -4193,6 +4251,8 @@ meter {
       margin: 0;
       width: 22px;
       height: 22px; }
+      .menu-bar.medium-icon-bottom > li > img:first-child:last-child, .menu-bar.medium-icon-bottom > li > .iconic:first-child:last-child {
+        margin: 0; }
     .menu-bar.medium-icon-bottom > li > a {
       -webkit-flex-flow: column-reverse nowrap;
           -ms-flex-flow: column-reverse nowrap;
@@ -4204,6 +4264,8 @@ meter {
       margin: 0;
       width: 22px;
       height: 22px; }
+      .menu-bar.medium-icon-left > li > img:first-child:last-child, .menu-bar.medium-icon-left > li > .iconic:first-child:last-child {
+        margin: 0; }
     .menu-bar.medium-icon-left > li > a {
       -webkit-flex-flow: row nowrap;
           -ms-flex-flow: row nowrap;
@@ -4218,6 +4280,8 @@ meter {
       margin: 0;
       width: 22px;
       height: 22px; }
+      .menu-bar.large-icon-top > li > img:first-child:last-child, .menu-bar.large-icon-top > li > .iconic:first-child:last-child {
+        margin: 0; }
     .menu-bar.large-icon-top > li > a {
       -webkit-flex-flow: column nowrap;
           -ms-flex-flow: column nowrap;
@@ -4229,6 +4293,8 @@ meter {
       margin: 0;
       width: 22px;
       height: 22px; }
+      .menu-bar.large-icon-right > li > img:first-child:last-child, .menu-bar.large-icon-right > li > .iconic:first-child:last-child {
+        margin: 0; }
     .menu-bar.large-icon-right > li > a {
       -webkit-flex-flow: row-reverse nowrap;
           -ms-flex-flow: row-reverse nowrap;
@@ -4240,6 +4306,8 @@ meter {
       margin: 0;
       width: 22px;
       height: 22px; }
+      .menu-bar.large-icon-bottom > li > img:first-child:last-child, .menu-bar.large-icon-bottom > li > .iconic:first-child:last-child {
+        margin: 0; }
     .menu-bar.large-icon-bottom > li > a {
       -webkit-flex-flow: column-reverse nowrap;
           -ms-flex-flow: column-reverse nowrap;
@@ -4251,6 +4319,8 @@ meter {
       margin: 0;
       width: 22px;
       height: 22px; }
+      .menu-bar.large-icon-left > li > img:first-child:last-child, .menu-bar.large-icon-left > li > .iconic:first-child:last-child {
+        margin: 0; }
     .menu-bar.large-icon-left > li > a {
       -webkit-flex-flow: row nowrap;
           -ms-flex-flow: row nowrap;
@@ -8690,6 +8760,9 @@ blockquote p {
 .margin-top-5 {
   margin-top: 5px; }
 
+.selected-history-background {
+  background-color: #c2e8d0; }
+
 .conversation-user-block-list {
   width: 100%;
   overflow: hidden;
@@ -8713,6 +8786,26 @@ blockquote p {
         width: 60px; }
       .conversation-user-block-list .history .message-history .content {
         margin-left: 80px; }
+        .conversation-user-block-list .history .message-history .content .userName {
+          margin-bottom: 8px;
+          color: #60a8cd; }
+        .conversation-user-block-list .history .message-history .content .lastUpdated {
+          font-size: 14px;
+          margin-top: 8px;
+          color: gray; }
+        .conversation-user-block-list .history .message-history .content .top {
+          width: 100%;
+          overflow: hidden; }
+          .conversation-user-block-list .history .message-history .content .top p.left {
+            float: left;
+            color: #60a8cd; }
+          .conversation-user-block-list .history .message-history .content .top p.right {
+            float: right;
+            font-size: 14px;
+            color: gray; }
+        .conversation-user-block-list .history .message-history .content .bottom {
+          margin-bottom: 0;
+          margin-top: -8px; }
       .conversation-user-block-list .history .message-history .email {
         color: #43b8ea;
         font-size: 12px;

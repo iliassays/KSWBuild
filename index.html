@@ -53,6 +53,7 @@
     <link href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,500,700" rel="stylesheet">
     <script src="/assets/js/routes.js"></script>
     <script src="/assets/js/foundation.js"></script>
+    <script src="/assets/js/socket.io.js"></script>
     <script src="/assets/js/app.js"></script>
 
 </head>
@@ -106,7 +107,8 @@
                             <div class="accountType">{{accountType | capitalize}}</div>
                         </div>
                     </li>
-                    <li class="background-color-dark" data-ksw-logged-in-user current-user-photo="{{profilePicture}}">
+
+                    <li class="background-color-dark" data-ksw-logged-in-user current-user-photo="{{profilePicture }}">
                         <zf-action-sheet id="current-user">
                             <a href="#" zf-hard-toggle="current-user" class="action-trigger">
                             </a>
@@ -124,7 +126,7 @@
                                         <div data-ng-repeat="connection in corporateConnections"
                                              data-ng-click="changeAccountType(connection)"
                                              class="content-menu-content">
-                                            <img data-ng-src="{{getPictureUrl(connection.picture)}}">
+                                            <img data-ng-src="{{connection | kswImageFilter: 113:connection.id:true}}">
                                             <p>{{userName}}</p>
 
                                             <p>{{connection.title}}</p>
