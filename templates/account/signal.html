@@ -32,7 +32,7 @@
                 <div class="signal-content">
                     <div class="signal-content-body">
                         <img data-ng-src="{{signal.doc.actor.url | kswImageFilter: 60:signal.doc.actor.userId}}" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
-                        <img data-ng-src="{{signal.doc.target.id.imgSrc | kswImageFilter: 60:signal.doc.actor.userId}}" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
+                        <img data-ng-src="{{signal.doc.target.id | kswImageFilter: 60:signal.doc.target.id._id}}" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
 
                         <div class="message" data-ng-if="signal.doc.activityType != 'Award-Nominated'">
                            <p>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="message" data-ng-if="signal.doc.activityType == 'Award-Nominated'">
-                            <span class="userName">{{signal.doc.target.id.firstName + signal.doc.target.id.lastName}} </span>
+                            <span class="userName">{{signal.doc.target.id.firstName +' ' + signal.doc.target.id.lastName}} </span>
                             nominated by  {{signal.doc.actor.displayName}} for {{signal.doc.object.templateId.title}}. Needs {{signal.doc.object.templateId.initialPledgeRequired}} total pledges.
                         </div>
 

@@ -8702,6 +8702,44 @@ blockquote p {
   text-align: center; }
 .nominate-award-main h4 {
   color: #54afa6; }
+.nominate-award-main .connection-main {
+  background: white;
+  padding-top: 14px;
+  height: 450px;
+  overflow-y: auto !important; }
+  .nominate-award-main .connection-main .custom-network-container-card {
+    background-color: #f5fff3;
+    cursor: pointer; }
+    .nominate-award-main .connection-main .custom-network-container-card img {
+      height: 100px;
+      width: 100px; }
+    .nominate-award-main .connection-main .custom-network-container-card p {
+      line-height: 0;
+      text-align: left;
+      font-size: 14px;
+      color: #43b8ea; }
+    .nominate-award-main .connection-main .custom-network-container-card p:first-of-type {
+      color: #000000;
+      margin-bottom: 0px;
+      text-overflow: ellipsis;
+      width: 188px;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 36px 10px 10px; }
+    .nominate-award-main .connection-main .custom-network-container-card .email-container {
+      text-overflow: ellipsis;
+      width: 188px;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 10px;
+      font-size: 12px; }
+  .nominate-award-main .connection-main .card {
+    border: 1px solid #ededed;
+    margin-bottom: 0.5rem;
+    color: #000;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden; }
 
 .content-menu-action-sheet .content-menu-main {
   margin-left: 15px !important;
@@ -8759,6 +8797,9 @@ blockquote p {
 
 .margin-top-5 {
   margin-top: 5px; }
+
+.margin-bottom-10 {
+  margin-bottom: 10px; }
 
 .selected-history-background {
   background-color: #c2e8d0; }

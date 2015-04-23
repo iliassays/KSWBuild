@@ -31,21 +31,46 @@
                 <div class="grid-block">
                     <div class="grid-content">
                         <label>Initial pledge required:</label>
-                        <input type="text" data-ng-model="award.initialPledgeRequired">
+                        <input type="text" data-ng-model="award.initialPledgeRequired" ng-readonly="true">
                     </div>
                 </div>
                 <div class="grid-block">
                     <div class="grid-content">
                         <label>Who can Pledge:</label>
-                        <select>
-                            <option>Public</option>
-                        </select>
+                        <input type="text" data-ng-model="whoCanPledge" ng-readonly="true"/>
                     </div>
                 </div>
-                <div class="grid-block">
+                <div class="grid-block vertical">
                     <div class="grid-content">
-                        <a class="button success">Add CANDIDATE</a>
+                        <a class="button success" data-ng-click="showConnection()">ADD CANDIDATE</a>
                     </div>
+
+                    <div class="grid-content connection-main" data-ng-if="connections.isShow">
+                        <div class="card custom-network-container-card " data-ng-repeat="person in connections.people" data-ng-click="selectCandidate(person)">
+                            <div class="grid-block">
+                                <div class="grid-content shrink">
+                                    <img data-ng-src="{{person|kswImageFilter:100:person.id}}">
+                                </div>
+                                <div class="grid-content wrap collapse">
+                                    <p title="{{person.title}}">{{person.title}}</p>
+                                    <p class="email-container" title="{{person.email}}">{{person.email}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-content margin-bottom-10" data-ng-if="selectedCandidate.id">
+                        <img data-ng-src="{{selectedCandidate|kswImageFilter:100:selectedCandidate.id}}" alt="{{selectedCandidate.title}}"/>
+                    </div>
+
+                    <div class="grid-content margin-bottom-10" data-ng-if="selectedCandidate.id">
+                        <textarea data-ng-model="awardNominationData.comment" placeholder="Type your comment here..."></textarea>
+                    </div>
+
+                    <div class="grid-content margin-bottom-10" data-ng-if="selectedCandidate.id">
+                        <a class="button success" data-ng-click="nominate()">NOMINATE</a>
+                    </div>
+
                 </div>
             </div>
             <div class="grid-content large-3">
@@ -68,3 +93,6 @@
         </div>
     </div>
 </div>
+
+
+

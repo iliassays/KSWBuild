@@ -37,7 +37,7 @@
                         {{selectedConversion.conversation.target.firstName +' '+ selectedConversion.conversation.target.lastName}}
                     </header>
 
-                    <div class="history" ksw-dynamic-height parent=".ksw-content" reduce="170">
+                    <div class="history" ksw-dynamic-height parent=".ksw-content" reduce="170" scroll-glue>
                         <div class="grid-content message-history" data-ng-repeat="conversation in selectedConversion.messages">
                             <img data-ng-src="{{conversation.actorId | kswImageFilter: 60:conversation.actorId._id}}" alt=""/>
 
