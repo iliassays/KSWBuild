@@ -34,7 +34,7 @@
             <div class="grid-container conversation">
                 <section class="block-list conversation-user-block-list">
                     <header class="title custom-header message-header-background">
-                        {{selectedConversion.conversation.target.firstName +' '+ selectedConversion.conversation.target.lastName}}
+                        {{selectedConversion.conversation.target == null ? "Person": selectedConversion.conversation.target.firstName +' '+ selectedConversion.conversation.target.lastName}}
                     </header>
 
                     <div class="history" ksw-dynamic-height parent=".ksw-content" reduce="170" scroll-glue>
