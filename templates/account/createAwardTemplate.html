@@ -1,0 +1,69 @@
+<div class="grid-block horizontal nominate-award-main">
+    <div class="grid-content large-12">
+        <div class="grid-block horizontal">
+            <div class="grid-content large-5">
+                <div class="card custom-card">
+                    <img data-ng-src="{{awardTemplate.imageUri| kswUrlFilter}}" data-ng-if="newTemplatePicure.imageData==''">
+                    <img src="{{newTemplatePicure.imageData}}" alt="" data-ng-if="newTemplatePicure.imageData!=''"/>
+                    <div class="card-section custom-section">
+                        <input type="file"  class="button expand success" ksw-file-on-change="onTemplateChange()"/>
+
+                        <input type="text" data-ng-model="awardTemplate.title" placeholder="Enter Title"/>
+                        <textarea data-ng-model="awardTemplate.description" name="" id="" cols="30" rows="4"
+                                  placeholder="Enter Description"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-content large-4">
+
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <h4>SETTINGS</h4>
+                    </div>
+                </div>
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <label>Award belongs to:</label>
+                        <select data-ng-model="awardTemplate.awardBelongsTo"
+                                data-ng-selected="0"
+                                data-ng-options="connection as connection.title for connection in corporateConnections">
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <label>Initial pledge required:</label>
+                        <input type="text" data-ng-model="awardTemplate.initialPledgeRequired">
+                    </div>
+                </div>
+
+                <div class="grid-block vertical">
+                    <div class="grid-content">
+                        <a class="button success" data-ng-click="saveNewTemplate()">CREATE</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="grid-content large-3">
+
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <h4>TAGS</h4>
+                    </div>
+                </div>
+                <div class="grid-block">
+                    <div class="grid-content">
+                        <label>Add Tags:</label>
+                       <span class="inline-label">
+                            <input type="text" data-ng-model="tagName">
+                            <a data-ng-click="addTag(tagName)" class="button success">Add</a>
+                       </span>
+                        <label data-ng-repeat="tag in awardTemplate.tags track by $index">{{tag.tagName}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

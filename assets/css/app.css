@@ -8989,9 +8989,15 @@ blockquote p {
         float: left; }
       .invitation-main .send-connection .send-connection-left p {
         float: left;
-        margin-left: 14px;
-        padding-top: 16px;
+        text-overflow: ellipsis;
+        width: 134px;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 10px;
         color: #bd8686; }
+      @media only screen and (min-width: 90.063em) and (max-width: 120em) {
+        .invitation-main .send-connection .send-connection-left p {
+          width: auto; } }
     .invitation-main .send-connection .send-connection-right {
       float: right;
       width: 44%;
@@ -9065,9 +9071,15 @@ blockquote p {
         float: left; }
       .people-you-may-know .recommended .recommended-left p {
         float: left;
-        margin-left: 14px;
-        padding-top: 16px;
+        text-overflow: ellipsis;
+        width: 134px;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 10px;
         color: white; }
+      @media only screen and (min-width: 90.063em) and (max-width: 120em) {
+        .people-you-may-know .recommended .recommended-left p {
+          width: auto; } }
     .people-you-may-know .recommended .recommended-right {
       float: right;
       width: 40%;
