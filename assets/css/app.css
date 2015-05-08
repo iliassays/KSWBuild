@@ -8236,6 +8236,12 @@ blockquote p {
     .login-container .login-left .login-button {
       width: 100%;
       margin: 0 0 1rem 0; }
+    .login-container .login-left .sign-up-title {
+      color: #ffc520;
+      font-size: 25px;
+      font-weight: bold; }
+    .login-container .login-left .sign-up-hints {
+      color: #ffffff; }
   .login-container .login-right {
     padding: 20px; }
     .login-container .login-right .headline {
@@ -8247,6 +8253,14 @@ blockquote p {
       font-weight: bold;
       text-transform: uppercase;
       padding: 5px 0px 0px 5px; }
+  .login-container .about-knot-suite {
+    color: #ffc520; }
+    .login-container .about-knot-suite a {
+      color: #DAD0D0; }
+  .login-container .award-button .view-awards {
+    background-color: #A8B031; }
+  .login-container .award-button .create-template {
+    background-color: #519D47; }
 
 .login-divider {
   border-left: 1px solid #0d746a;
@@ -8889,6 +8903,228 @@ blockquote p {
       height: 30px;
       margin-right: 10px;
       width: 30px; }
+
+.connection-request-main {
+  background-color: #3e85ce;
+  overflow-y: auto; }
+  .connection-request-main .request {
+    width: 100%;
+    overflow: hidden !important;
+    border-bottom: 1px solid #6b5e5e;
+    padding: 7px; }
+    .connection-request-main .request .request-left {
+      float: left; }
+      .connection-request-main .request .request-left img {
+        height: 60px;
+        width: 60px;
+        float: left; }
+      .connection-request-main .request .request-left p {
+        float: left;
+        color: white;
+        text-overflow: ellipsis;
+        width: 134px;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 10px; }
+      @media only screen and (min-width: 90.063em) and (max-width: 120em) {
+        .connection-request-main .request .request-left p {
+          width: auto; } }
+    .connection-request-main .request .request-right {
+      float: right;
+      width: 46%;
+      padding-top: 6px; }
+      .connection-request-main .request .request-right input {
+        width: 150px;
+        float: left;
+        margin-right: 8px; }
+      .connection-request-main .request .request-right .request-reject {
+        float: left;
+        background: url("/assets/img/icons/connection/blue_delete.png");
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+        margin-top: 5px;
+        cursor: pointer; }
+      .connection-request-main .request .request-right .request-accept {
+        float: left;
+        background: url("/assets/img/icons/connection/blue_accept.png");
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+        margin-top: 5px;
+        cursor: pointer; }
+
+.connection-request-header {
+  width: 100%;
+  overflow: hidden; }
+  .connection-request-header h6 {
+    float: left; }
+  .connection-request-header a {
+    float: right;
+    margin-right: 0; }
+
+.invitation-header {
+  height: 51px; }
+
+.invitation-bottom {
+  padding-top: 10px;
+  width: 100%;
+  overflow: hidden; }
+  .invitation-bottom a {
+    float: right; }
+
+.invitation-main {
+  background-color: #ecf0f2;
+  overflow-y: auto; }
+  .invitation-main .send-connection {
+    width: 100%;
+    overflow: hidden !important;
+    border-bottom: 1px solid #6b5e5e;
+    padding: 7px; }
+    .invitation-main .send-connection .send-connection-left {
+      float: left; }
+      .invitation-main .send-connection .send-connection-left img {
+        height: 60px;
+        width: 60px;
+        float: left; }
+      .invitation-main .send-connection .send-connection-left p {
+        float: left;
+        margin-left: 14px;
+        padding-top: 16px;
+        color: #bd8686; }
+    .invitation-main .send-connection .send-connection-right {
+      float: right;
+      width: 44%;
+      padding-top: 6px; }
+      .invitation-main .send-connection .send-connection-right input {
+        width: 150px;
+        float: left;
+        margin-right: 8px; }
+      .invitation-main .send-connection .send-connection-right .send-connection-accept {
+        float: left;
+        background: url("/assets/img/icons/connection/blue_accept.png");
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+        margin-top: 5px;
+        cursor: pointer; }
+      .invitation-main .send-connection .send-connection-right .send-connection-reject {
+        float: left;
+        background: url("/assets/img/icons/connection/blue_delete.png");
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+        margin-top: 5px;
+        cursor: pointer; }
+
+.invitation-search {
+  padding: 10px;
+  background: #05544c; }
+  .invitation-search span {
+    margin: 0; }
+
+.search-result-main {
+  height: 300px;
+  overflow: auto;
+  background: white;
+  width: 29%;
+  position: absolute;
+  padding: 7px;
+  margin-left: 10px;
+  margin-top: -6px; }
+  .search-result-main .search-result {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px; }
+    .search-result-main .search-result:hover {
+      background-color: #4d4a4a;
+      cursor: pointer; }
+    .search-result-main .search-result img {
+      width: 60px;
+      height: 60px;
+      float: left; }
+    .search-result-main .search-result p {
+      float: left;
+      margin-left: 33px;
+      padding-top: 15px;
+      color: #AB9F9F; }
+
+.people-you-may-know {
+  background-color: #d96667;
+  overflow-y: auto; }
+  .people-you-may-know .recommended {
+    width: 100%;
+    overflow: hidden !important;
+    border-bottom: 1px solid #6b5e5e;
+    padding: 7px; }
+    .people-you-may-know .recommended .recommended-left {
+      float: left; }
+      .people-you-may-know .recommended .recommended-left img {
+        height: 60px;
+        width: 60px;
+        float: left; }
+      .people-you-may-know .recommended .recommended-left p {
+        float: left;
+        margin-left: 14px;
+        padding-top: 16px;
+        color: white; }
+    .people-you-may-know .recommended .recommended-right {
+      float: right;
+      width: 40%;
+      padding-top: 6px; }
+      .people-you-may-know .recommended .recommended-right input {
+        width: 150px;
+        float: left;
+        margin-right: 8px; }
+      .people-you-may-know .recommended .recommended-right .recommended-accept {
+        float: left;
+        background: url("/assets/img/icons/connection/blue_accept.png");
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+        margin-top: 5px;
+        cursor: pointer; }
+
+.people-you-may-know-header {
+  width: 100%;
+  overflow: hidden; }
+  .people-you-may-know-header h6 {
+    float: left; }
+  .people-you-may-know-header a {
+    float: right;
+    margin-right: 0; }
+
+.site-search-box {
+  margin: 0; }
+  .site-search-box input {
+    height: 51px;
+    width: 380px; }
+
+.site-search-result {
+  position: absolute;
+  list-style: none;
+  background: #ffffff;
+  top: 83px;
+  margin-left: -380px;
+  z-index: 1;
+  width: 380px;
+  height: 300px;
+  overflow: auto; }
+  .site-search-result li {
+    padding: 3px 0 3px 3px;
+    margin: 5px; }
+    .site-search-result li:hover {
+      background-color: #453E3E;
+      cursor: pointer;
+      color: #ffffff; }
+    .site-search-result li img {
+      float: left;
+      width: 47px;
+      height: 47px;
+      padding: 3px; }
+    .site-search-result li p {
+      margin-top: 4px;
+      margin-left: 70px; }
 
 .ksw-header {
   padding: 2rem;

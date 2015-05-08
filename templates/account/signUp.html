@@ -10,36 +10,36 @@
                 </div>
 
             </div>
+
+            <div class="grid-block">
+                <div class="small-10 medium-10 large-9 grid-container sign-up-title">
+                  Sign Up
+                </div>
+            </div>
+            <div class="grid-block">&nbsp;</div>
+
+            <div class="grid-block">
+                <div class="small-10 medium-10 large-9 grid-container sign-up-hints">
+                   Please provide a valid email address which is you use as a primary work purpose.
+                </div>
+            </div>
+            <div class="grid-block">&nbsp;</div>
+
             <div class="grid-block">
                 <div class="small-10 medium-10 large-9 grid-container">
-                    <input placeholder="Username" data-ng-model="user.loginEmail" type="text"
-                           data-ng-keypress="($event.which === 13)?loginNow():0">
+                    <input placeholder="example@example.com" data-ng-model="email" type="text" required=""
+                           data-ng-keypress="($event.which === 13)?registerNow(email):0">
                 </div>
 
             </div>
+
             <div class="grid-block">
                 <div class="small-10 medium-10 large-9 grid-container">
-                    <input placeholder="Password" data-ng-model="user.loginPassword" type="password"
-                           data-ng-keypress="($event.which === 13)?loginNow():0">
+                    <a class="button success login-button" href="javascript:;" data-ng-click="registerNow(email)">REGISTER NOW</a>
                 </div>
 
             </div>
-            <div class="grid-block">
-                <div class="small-10 medium-10 large-9 grid-container">
-                    <a class="button success login-button" href="javascript:;" data-ng-click="loginNow()">LOGIN NOW</a>
-                </div>
 
-            </div>
-            <div class="grid-block">
-                <div class="small-10 medium-10 large-9 grid-container">
-                    <p class="info">
-                        <!--<img zf-iconic="" icon="thumb" size="small" class="iconic-color-warning">-->
-                        <i class="fa fa-arrow-circle-o-right fa-icon-warning"></i>
-                        Forgot your password? click <a herf="javascript:;">here</a> to retrieve.
-                    </p>
-                </div>
-
-            </div>
         </div>
 
         <div class="grid-content medium-1 login-divider">
@@ -64,20 +64,8 @@
             </div>
             <div class="grid-block">
                 <div class="small-10 medium-12 large-11 grid-container">
-
-                    <p class="award-button">
-                        <a href="" class="button view-awards" data-ng-click="loginAlert()">View Award Vault</a>
-                        <a href="" class="button create-template" data-ng-click="loginAlert()">Create Template</a>
-                    </p>
-                    <p class="about-knot-suite">
-                        <a href="#">About</a> |
-                        <a href="http://kswblog.azurewebsites.net">Blog</a> |
-                        <a href="#">User Agreement</a> |
-                        <a href="#">Comment</a>
-                    </p>
                     <p>
-                        <i class="fa fa-arrow-circle-o-right fa-icon-warning"></i><a  data-ng-href="/signUp"
-                                                                                      class="sign-up-link">SIGN UP</a>
+                        <i class="fa fa-arrow-circle-o-right fa-icon-warning"></i><a data-ng-href="/" class="sign-up-link">BACK TO LOGIN PANEL</a>
                     </p>
                 </div>
             </div>

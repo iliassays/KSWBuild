@@ -65,15 +65,32 @@
 <div class="grid-frame vertical">
     <div class="grid-content shrink" data-ng-class="{ 'ksw-header': isLoggedIn }" ng-controller="NavigationCtrl">
         <div class="menu-group site-header" data-ng-if="isLoggedIn">
-            <div class="menu-group-left">
+            <div class="menu-group-left" data-ng-controller="searchCtrl">
                 <ul class="menu-bar-color menu-bar primary">
                     <li class="background-color-home-or-connection-menu-item">
                         <a href="/myProfile">
                             <img zf-iconic="" icon="home" size="medium" class="iconic-color-alert">
                         </a>
                     </li>
+                    <li class="background-color-search-menu-item" data-ng-if="searchflag">
+                        <span class="inline-label site-search-box">
+                            <input type="search"
+                                   placeholder="Search User or Organization.."
+                                   data-ng-change="updateSearchResult(siteSearchKey)"
+                                   data-ng-model="siteSearchKey">
+                        </span>
+                        <ul class="site-search-result" data-ng-if="siteSearchResult.length">
+                            <li data-ng-repeat="result in siteSearchResult">
+                                <img data-ng-if="result.entityType == 'Person'" data-ng-src="{{result.entityId | kswImageFilter: 60:result.entityId}}"
+                                     alt=""/>
+                                <img data-ng-if="result.entityType == 'Organization'" data-ng-src="{{result.entityId | kswImageFilter: 60:result.entityId:true}}"
+                                     alt=""/>
+                                <p>{{result.title}}</p>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="background-color-search-menu-item">
-                        <a href="#">
+                        <a herf="javascript:;" data-ng-click="searchflag=!searchflag">
                             <img zf-iconic="" icon="magnifying-glass" size="medium" class="iconic-color-secondary">
                         </a>
                     </li>
@@ -84,7 +101,7 @@
                 <ul class="icon-left menu-bar-color primary menu-bar menu-bar-has-action-sheet">
 
                     <li class="background-color-home-or-connection-menu-item">
-                        <a href="/myProfile">
+                        <a href="/connectionRequest">
                             <img zf-iconic="" icon="person" size="medium" class="iconic-color-success">
                         </a>
                     </li>
@@ -96,7 +113,7 @@
                     </li>
 
                     <li class="background-color-notification-menu-item">
-                        <a href="#">
+                        <a href="">
                             <img zf-iconic="" icon="bell" size="medium" class="iconic-color-success">
                         </a>
                     </li>
@@ -119,7 +136,9 @@
 
                                         <div class="content-menu-content" data-ng-click="changePersonalAccount()">
                                             <img data-ng-src="{{personalAccountInfo | kswImageFilter: 113:personalAccountInfo.accountId}}">
+
                                             <p>{{userName}}</p>
+
                                             <p>Personal Account</p>
                                         </div>
 
@@ -127,6 +146,7 @@
                                              data-ng-click="changeAccountType(connection)"
                                              class="content-menu-content">
                                             <img data-ng-src="{{connection | kswImageFilter: 113:connection.id:true}}">
+
                                             <p>{{userName}}</p>
 
                                             <p>{{connection.title}}</p>
