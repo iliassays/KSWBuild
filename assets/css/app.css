@@ -8222,6 +8222,9 @@ blockquote p {
 .background-color-user-info-menu-item {
   background-color: #40444f; }
 
+.text-color-white {
+  color: #ffffff; }
+
 .login-container {
   padding-top: 5%; }
   .login-container .logo {
@@ -9138,6 +9141,69 @@ blockquote p {
       margin-top: 4px;
       margin-left: 70px; }
 
+.preview-app {
+  padding-top: 5%; }
+  .preview-app .logo {
+    padding-bottom: 40px; }
+  .preview-app .preview-app-left {
+    padding: 20px; }
+    .preview-app .preview-app-left .info {
+      color: #ffffff; }
+      .preview-app .preview-app-left .info a {
+        color: #ffffff;
+        font-weight: bold; }
+    .preview-app .preview-app-left .login-button {
+      width: 100%;
+      margin: 0 0 1rem 0; }
+    .preview-app .preview-app-left .sign-up-title {
+      color: #ffc520;
+      font-size: 25px;
+      font-weight: bold; }
+    .preview-app .preview-app-left .sign-up-hints {
+      color: #ffffff; }
+  .preview-app .preview-app-right {
+    padding: 20px; }
+    .preview-app .preview-app-right .headline {
+      color: #ffc520; }
+    .preview-app .preview-app-right .text {
+      color: #ffffff; }
+    .preview-app .preview-app-right .sign-up-link {
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 5px 0px 0px 5px; }
+  .preview-app .about-knot-suite {
+    color: #ffc520; }
+    .preview-app .about-knot-suite a {
+      color: #DAD0D0; }
+  .preview-app .award-button .view-awards {
+    background-color: #A8B031; }
+  .preview-app .award-button .create-template {
+    background-color: #519D47; }
+
+.preview-app-divider {
+  max-width: 1.33%; }
+
+.text-align-right {
+  text-align: right; }
+
+.float-right {
+  float: right; }
+
+.instruction {
+  padding-top: 5%; }
+  .instruction .instruction-body {
+    padding-left: 16px;
+    background-color: #105A52; }
+    .instruction .instruction-body img {
+      padding-top: 12px; }
+  .instruction .back-to-home {
+    color: #ffffff;
+    padding: 12px;
+    float: right; }
+    .instruction .back-to-home:hover {
+      color: #ffffff; }
+
 .ksw-header {
   padding: 2rem;
   overflow-y: visible !important; }
@@ -9169,3 +9235,6 @@ body {
 
 .modal {
   background-color: transparent !important; }
+
+.knot-suite-box-background {
+  background: #11776c; }
