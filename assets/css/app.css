@@ -9263,6 +9263,24 @@ blockquote p {
 .instruction-videos video:last-of-type {
   margin-right: 0; }
 
+.create-org-main .title-bar {
+  background-color: #08514a;
+  border-bottom: 0;
+  color: #ffffff; }
+.create-org-main .cancel-button {
+  background-color: #96B29A; }
+.create-org-main .create-org-body {
+  background-color: #13796e; }
+  .create-org-main .create-org-body .create-org-form {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .create-org-main .create-org-body .create-org-form label {
+      color: #ffffff; }
+    .create-org-main .create-org-body .create-org-form a {
+      color: #ffffff; }
+      .create-org-main .create-org-body .create-org-form a:hover {
+        color: wheat; }
+
 .ksw-header {
   padding: 2rem;
   overflow-y: visible !important; }

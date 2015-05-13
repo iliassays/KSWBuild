@@ -62,6 +62,36 @@
 <div zf-modal="" id="loaderModal" overlay-close="false">
     <p style="text-align: center"><img src="/assets/img/ajax-loader.gif" alt="Loader"/></p>
 </div>
+
+<div zf-modal="" id="createOrgModal" class="collapse">
+    <div class="grid-block vertical create-org-main">
+        <div class="title-bar">
+            <div class="center">CREATE NEW ORGANIZATION</div>
+        </div>
+
+        <div class="vertical grid-block create-org-body" data-ng-controller="createOrgCtrl">
+            <div class="grid-container create-org-form">
+                    <label for="orgName">
+                        Organization Name
+                        <input type="text" name="orgName" data-ng-model="org.name"/>
+                    </label>
+
+                    <label for="orgName">
+                        Organization Email Domain
+                        <input type="text" name="orgName" data-ng-model="org.email"/>
+                    </label>
+                <input type="checkbox" data-ng-model="org.isAgreed"/>
+                <label for="">I agree to the <a href="">Terms and Conditions</a></label>
+            </div>
+
+            <div class="grid-container">
+                <a href="" class="warning button" data-ng-click="createOrg()">CREATE</a>
+                <a zf-close="" href="" class="cancel-button button">CANCEL</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="grid-frame vertical">
     <div class="grid-content shrink" data-ng-class="{ 'ksw-header': isLoggedIn }" ng-controller="NavigationCtrl">
         <div class="menu-group site-header" data-ng-if="isLoggedIn">
@@ -81,10 +111,13 @@
                         </span>
                         <ul class="site-search-result" data-ng-if="siteSearchResult.length">
                             <li data-ng-repeat="result in siteSearchResult">
-                                <img data-ng-if="result.entityType == 'Person'" data-ng-src="{{result.entityId | kswImageFilter: 60:result.entityId}}"
+                                <img data-ng-if="result.entityType == 'Person'"
+                                     data-ng-src="{{result.entityId | kswImageFilter: 60:result.entityId}}"
                                      alt=""/>
-                                <img data-ng-if="result.entityType == 'Organization'" data-ng-src="{{result.entityId | kswImageFilter: 60:result.entityId:true}}"
+                                <img data-ng-if="result.entityType == 'Organization'"
+                                     data-ng-src="{{result.entityId | kswImageFilter: 60:result.entityId:true}}"
                                      alt=""/>
+
                                 <p>{{result.title}}</p>
                             </li>
                         </ul>
@@ -159,7 +192,8 @@
                                     </div>
                                     <div class="align-justify grid-block content-menu-bottom">
                                         <div class="grid-block large-3">
-                                            <a href="javascript:;" class="button success create-org">Create ORG</a>
+                                            <a href="javascript:;" data-ng-click="openCreateOrgModal()"
+                                               class="button success create-org">Create ORG</a>
                                         </div>
                                         <div class="grid-block large-3">
                                             <a href="javascript:;" class="button warning log-out"
