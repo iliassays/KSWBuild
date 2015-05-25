@@ -2,7 +2,7 @@
 <div class="grid-content">
     <div class="grid-block horizontal">
 
-        <div class="large-4 medium-grid-content sidebar vertical panel panel-left" ng-class="positionClass" ng-transclude="" zf-panel="" id="leftSidebar" zf-closable="panel">
+        <div class="large-4 medium-4 medium-grid-content sidebar vertical panel panel-left" ng-class="positionClass" ng-transclude="" zf-panel="" id="leftSidebar" zf-closable="panel">
             <div class="grid-content">
                 <a zf-close="" class="close-button hide-for-medium">×</a>
                 <section class="block-list conversation-user-block-list">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="large-4 grid-content">
+        <div class="large-4 medium-4 grid-content">
             <a class="small secondary expand button hide-for-medium" zf-toggle="leftSidebar">Show Conversations</a>
             <a class="small secondary expand button hide-for-medium" zf-toggle="rightSidebar">Show People</a>
             <div class="grid-container conversation">
@@ -44,9 +44,12 @@
                             <div class="content">
                                 <div class="top">
                                     <p class="left">{{conversation.actorId.firstName +' ' +conversation.actorId.lastName}}</p>
+
+                                </div>
+                                <div class="bottom">
+                                    <p>{{conversation.message}}</p>
                                     <p class="right">{{conversation.creationDate|kswDateDifference}}</p>
                                 </div>
-                                <p class="bottom">{{conversation.message}}</p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +63,7 @@
 
         </div>
 
-        <div class="large-4 medium-grid-content sidebar vertical panel panel-left" ng-class="positionClass" ng-transclude="" zf-panel="" id="rightSidebar" zf-closable="panel">
+        <div class="large-4 medium-4 medium-grid-content sidebar vertical panel panel-left" ng-class="positionClass" ng-transclude="" zf-panel="" id="rightSidebar" zf-closable="panel">
             <div class="grid-content">
 
                 <section class="block-list conversation-user-block-list">

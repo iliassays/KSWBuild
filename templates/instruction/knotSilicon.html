@@ -39,17 +39,8 @@
 
             <div class="grid-block">
                 <div class="small-10 medium-10 large-10 grid-content instruction-videos">
-                    <video>
-                        <source type="video/webm" src="/assets/videos/sample.webm">
-                    </video>
-                    <video>
-                        <source type="video/webm" src="/assets/videos/sample.webm">
-                    </video>
-                    <video>
-                        <source type="video/webm" src="/assets/videos/sample.webm">
-                    </video>
-                    <video>
-                        <source type="video/webm" src="/assets/videos/sample.webm">
+                    <video data-ng-repeat="video in previewVideos | limitTo:-4" title="{{video.title}}">
+                        <source type="video/webm" src="{{video.src}}">
                     </video>
                 </div>
 
