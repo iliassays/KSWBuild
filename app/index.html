@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Knot Suite Web</title>
+    <meta name="description"
+          content="material, material design, angular material, app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="icon" href="../libs/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../libs/assets/animate.css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/assets/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <link rel="stylesheet" href="../libs/angular/angular-loading-bar/build/loading-bar.css" type="text/css"/>
+    <link rel="stylesheet" href="../libs/angular/angular-material/angular-material.css" type="text/css"/>
+
+    <link rel="stylesheet" href="../libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+
+    <link rel="stylesheet" href="styles/material-design-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/font.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/app.css" type="text/css"/>
+</head>
+<body ng-app="app">
+<div class="app" ui-view ng-controller="AppCtrl"></div>
+<!-- jQuery -->
+<script src="../libs/jquery/jquery/dist/jquery.js"></script>
+<script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<!-- Angular -->
+<script src="../libs/angular/angular/angular.js"></script>
+<script src="../libs/angular/angular-animate/angular-animate.js"></script>
+<script src="../libs/angular/angular-aria/angular-aria.js"></script>
+<script src="../libs/angular/angular-cookies/angular-cookies.js"></script>
+<script src="../libs/angular/angular-messages/angular-messages.js"></script>
+<script src="../libs/angular/angular-resource/angular-resource.js"></script>
+<script src="../libs/angular/angular-sanitize/angular-sanitize.js"></script>
+<script src="../libs/angular/angular-touch/angular-touch.js"></script>
+<script src="../libs/angular/angular-material/angular-material.js"></script>
+
+<!-- Vendor -->
+<script src="../libs/angular/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../libs/angular/ngstorage/ngStorage.js"></script>
+<script src="../libs/angular/angular-ui-utils/ui-utils.js"></script>
+
+<!-- bootstrap -->
+<script src="../libs/angular/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+<!-- lazyload -->
+<script src="../libs/angular/oclazyload/dist/ocLazyLoad.js"></script>
+<!-- translate -->
+<script src="../libs/angular/angular-translate/angular-translate.js"></script>
+<script src="../libs/angular/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="../libs/angular/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+<script src="../libs/angular/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+<!-- loading-bar -->
+<script src="../libs/angular/angular-loading-bar/build/loading-bar.js"></script>
+
+<!-- App -->
+
+<!--KSW lib Start-->
+<script src="../libs/jquery/lodash/lodash.js"></script>
+<script src="../libs/jquery/socket.io-client/socket.io.js"></script>
+<script src="../libs/jquery/angular-inview/angular-inview.js"></script>
+<!--KSW lib End-->
+<script src="scripts/app.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/config.lazyload.js"></script>
+<script src="scripts/config.router.js"></script>
+<script src="scripts/app.ctrl.js"></script>
+
+<script src="scripts/directives/lazyload.js"></script>
+<script src="scripts/directives/ui-jp.js"></script>
+<script src="scripts/directives/ui-nav.js"></script>
+<script src="scripts/directives/ui-fullscreen.js"></script>
+<script src="scripts/directives/ui-scroll.js"></script>
+<script src="scripts/directives/ui-toggle.js"></script>
+<script src="scripts/filters/fromnow.js"></script>
+<script src="scripts/services/ngstore.js"></script>
+<script src="scripts/services/ui-load.js"></script>
+
+<!-- KSW Module Start -->
+<script src="scripts/modules/kswDirectiveModule.js"></script>
+<script src="scripts/modules/kswFilterModule.js"></script>
+<!-- KSW Module End -->
+
+<!-- KSW Filter Start -->
+<script src="scripts/filters/ksw/kswImageFilter.js"></script>
+<script src="scripts/filters/ksw/kswUrlFilter.js"></script>
+<script src="scripts/filters/ksw/kswDateDifference.js"></script>
+<script src="scripts/filters/ksw/kswDocumentIconFilter.js"></script>
+<script src="scripts/filters/ksw/kswCapitalizeFilter.js"></script>
+<script src="scripts/filters/ksw/kswSpaceIconFilter.js"></script>
+<!-- KSW Filter End -->
+
+<!-- KSW Script Directives Start-->
+<script src="scripts/directives/ksw/kswReadMore.js"></script>
+<script src="scripts/directives/ksw/kswMiniPeoplePicker.js"></script>
+<script src="scripts/directives/ksw/kswUpdateStringArea.js"></script>
+<script src="scripts/directives/ksw/kswComposeSignal.js"></script>
+<script src="scripts/directives/ksw/kswPeoplePicker.js"></script>
+<script src="scripts/directives/ksw/kswFileOnchange.js"></script>
+<script src="scripts/directives/ksw/kswWebLink.js"></script>
+<script src="scripts/directives/ksw/kswIsAppeared.js"></script>
+<!-- KSW Script Directives Start-->
+
+
+<!-- KSW Service Start-->
+<script src="scripts/services/ksw/MixPanelService.js"></script>
+<script src="scripts/services/ksw/EventService.js"></script>
+<script src="scripts/services/ksw/ApiService.js"></script>
+<script src="scripts/services/ksw/UserContextService.js"></script>
+<script src="scripts/services/ksw/SignUpService.js"></script>
+<script src="scripts/services/ksw/LoginService.js"></script>
+<script src="scripts/services/ksw/LoggerService.js"></script>
+<script src="scripts/services/ksw/SignalService.js"></script>
+<script src="scripts/services/ksw/AwardService.js"></script>
+<script src="scripts/services/ksw/ConnectionRequestService.js"></script>
+<script src="scripts/services/ksw/ChatService.js"></script>
+<script src="scripts/services/ksw/hashTagService.js"></script>
+<script src="scripts/services/ksw/SpaceService.js"></script>
+<!-- KSW Service End-->
+
+<!-- KSW Script Controller Start-->
+<script src="scripts/controllers/ksw/signInCtrl.js"></script>
+<script src="scripts/controllers/ksw/asideNavigationCtrl.js"></script>
+<script src="scripts/controllers/ksw/accountCtrl.js"></script>
+<script src="scripts/controllers/ksw/userProfileCtrl.js"></script>
+<script src="scripts/controllers/ksw/networksCtrl.js"></script>
+<script src="scripts/controllers/ksw/userAwardCtrl.js"></script>
+<script src="scripts/controllers/ksw/allAwardCtrl.js"></script>
+<script src="scripts/controllers/ksw/nominateAwardCtrl.js"></script>
+<script src="scripts/controllers/ksw/createAwardTemplateCtrl.js"></script>
+<script src="scripts/controllers/ksw/createConnectionCtrl.js"></script>
+<script src="scripts/controllers/ksw/chatCtrl.js"></script>
+<script src="scripts/controllers/ksw/viewSpaceCtrl.js"></script>
+<script src="scripts/controllers/ksw/viewWebLinkCtrl.js"></script>
+<script src="scripts/controllers/ksw/viewUploadedCtrl.js"></script>
+<script src="scripts/controllers/ksw/viewTextCtrl.js"></script>
+<!-- KSW Script Controller End-->
+
+
+
+
+</body>
+</html>

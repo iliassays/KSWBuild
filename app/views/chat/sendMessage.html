@@ -1,0 +1,83 @@
+<div class="row row-sm">
+    <div class="col-sm-4 col-md-3 col-md-offset-1">
+        <div class="md-whiteframe-z0 bg-white">
+            <ul class="nav nav-md nav-tabs nav-lines b-info">
+                <li class="active">
+                    <a href data-toggle="tab" data-target="#conversations">Conversations</a>
+                </li>
+                <li>
+                    <a href data-toggle="tab" data-target="#people">People</a>
+                </li>
+            </ul>
+            <div class="tab-content p m-b-md b-t b-t-2x">
+                <div role="tabpanel" class="tab-pane animated fadeIn active" id="conversations">
+                    <div class="md-list md-whiteframe-z0 bg-white m-b">
+                        <div class="md-list-item" data-ng-repeat="conversation in conversations"
+                             data-ng-click="loadAllMessage(conversation)"
+                             data-ng-class="{'selected-history-background' : conversation._id == selectedConversion.conversation._id}">
+                            <div class="md-list-item-left">
+                                <img data-ng-src="{{conversation.target._id | kswImageFilter: 60:conversation.target._id}}"
+                                     alt="" class="w-full circle"/>
+                            </div>
+                            <div class="md-list-item-content">
+                                <h3 class="text-md">{{conversation.target.firstName +' '+conversation.target.lastName}}</h3>
+                                <small class="font-thin">{{conversation.lastMessage.substr(0,50)}}</small>
+                                <small class="font-thin pull-right">{{conversation.lastMessageDate|kswDateDifference}}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane animated fadeIn" id="people">
+                    <div class="md-list md-whiteframe-z0 bg-white m-b">
+                        <div class="md-list-item" data-ng-repeat="connection in personalConnections"
+                             data-ng-click="selectNewPeople(connection)">
+                            <div class="md-list-item-left">
+                                <img data-ng-src="{{connection | kswImageFilter: 60:connection._id}}"
+                                     alt="{{connection.title}}" class="w-full circle"/>
+                            </div>
+                            <div class="md-list-item-content">
+                                <h3 class="text-md">{{connection.title}}</h3>
+                                <small class="font-thin"> {{connection.email}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8 bg-white col-md-7">
+        <h1>
+            {{selectedConversion.conversation.target == null ? "Person":
+            selectedConversion.conversation.target.firstName +' '+
+            selectedConversion.conversation.target.lastName}}
+        </h1>
+        <div class="md-list md-whiteframe-z0 bg-white m-b">
+            <div class="md-list-item" data-ng-repeat="conversation in selectedConversion.messages">
+                <div class="md-list-item-left">
+                    <img data-ng-src="{{conversation.actorId | kswImageFilter: 60:conversation.actorId._id}}"
+                         alt="" class="w-full circle"/>
+                </div>
+                <div class="md-list-item-content">
+                    <h3 class="text-md">{{conversation.actorId.firstName +' ' + conversation.actorId.lastName}}</h3>
+                    <small class="font-thin">{{conversation.message}}</small>
+                    <small class="font-thin pull-right">{{conversation.creationDate|kswDateDifference}}
+                    </small>
+                </div>
+            </div>
+
+            <div class="panel panel-card">
+                <form>
+                    <textarea class="form-control no-border" rows="3" autofocus="" placeholder="Type here new message" data-ng-model="selectedConversion.newMessage"></textarea>
+                </form>
+                <div class="lt p">
+                    <button class="btn btn-info pull-right btn-sm p-h font-bold" data-ng-click="sendNewMessage(selectedConversion)">Reply</button>
+                    <ul class="nav nav-pills nav-sm">
+                        <li><a href><i class="glyphicon glyphicon-paperclip"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

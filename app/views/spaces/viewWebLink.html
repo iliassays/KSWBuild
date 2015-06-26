@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-3">
+        <div class="panel panel-default">
+            <div class="panel-heading bg-white">
+                LINK
+                <br>
+                <img data-ng-src="{{space.imgSrc}}" alt=""/>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="spaceUrl">Url</label>
+                        <input type="url" class="form-control" id="spaceUrl" data-ng-model="space.fileUrl">
+                    </div>
+                    <div class="form-group">
+                        <label for="spaceTitle">Title</label>
+                        <input type="text" class="form-control" id="spaceTitle" data-ng-model="space.spaceName">
+                    </div>
+                    <div class="form-group">
+                        <label for="spaceDescription">Description</label>
+                        <textarea name="spaceDescription" id="spaceDescription" cols="30" rows="10"
+                                  data-ng-model="space.docContents"></textarea>
+                    </div>
+
+                    <a href="{{space.fileUrl}}" class="btn btn-warning" target="_blank">VISIT THIS LINK</a>
+
+
+                    <button type="submit" class="btn btn-success" data-ng-click="updateSpace()">Save</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div class="md-whiteframe-z0 bg-white" ng-include="'views/partials/ksw/viewSpace.html'">
+
+        </div>
+    </div>
+</div>

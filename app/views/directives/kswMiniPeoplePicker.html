@@ -1,0 +1,11 @@
+<ul class="list-group md-whiteframe-z0 mini-people-picker">
+        <li class="list-group-item" data-ng-repeat="person in people"
+         data-comment="comment"
+         data-ng-click="selectPerson(person,comment)">
+          <a href="" class="pull-left w-40 m-r"><img data-ng-src="{{person.picture | kswUrlFilter}}" class="img-responsive img-circle"></a>
+          <div class="clear">
+            <a href="" class="font-bold block m-t-sm">{{person.title}}</a>
+            
+          </div>
+        </li>        
+</ul>

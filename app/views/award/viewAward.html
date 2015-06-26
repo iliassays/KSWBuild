@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-4 col-md-3 col-md-offset-2">
+        <a md-ink-ripple class="btn btn-fw btn-success" ui-sref="award.all">NOMINATE AN AWARD</a>
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-xs-18 col-sm-6 col-md-3 col-md-offset-2">
+                <h2>NOMINATED FOR {{nominatedAwards.length}}</h2>
+              <div class="thumbnail" data-ng-repeat="nominatedAward in nominatedAwards">
+                <img ng-src="{{nominatedAward.image | kswUrlFilter}}" alt="Washed Out">
+                  <div class="caption">
+                    <h4>{{nominatedAward.title}}</h4>
+                    <p>{{nominatedAward.description}}</p>                
+                </div>
+              </div>
+        </div>
+        <div class="col-xs-18 col-sm-6 col-md-3 col-md-offset-2">
+            <h2>AWARDED FOR {{awards.length}}</h2>
+          <div class="thumbnail" data-ng-repeat="award in awards">
+            <img ng-src="{{award.image | kswUrlFilter}}" alt="Washed Out">
+              <div class="caption">
+                <h4>{{award.title}}</h4>
+                <p>{{award.description}}</p>                
+            </div>
+          </div>
+        </div>        
+</div>
