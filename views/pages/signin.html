@@ -1,0 +1,85 @@
+<div class="container ">
+<div class="row ">
+  
+    <div class="col-xs-12">      
+      <div class="row">        
+
+          <div class="center-block col-xs-12 /*w-xxl*/" >
+            <div class="navbar">
+              <div class="navbar-brand m-t-lg text-center">        
+                <img src="images/logo310x150.png" alt="." style="max-height: 80px;">               
+              </div>
+            </div>
+
+            <div class="p-lg panel md-whiteframe-z1 text-color m">
+              <div class="m-b text-sm">
+                Sign in with your {{app.name}} Account
+              </div>
+              <form name="form">
+
+                <div class="md-form-group float-label">
+                  <input type="email" class="md-input" ng-model="user.loginEmail" required  data-ng-keypress="($event.which === 13)?loginNow():0">
+                  <label>Email</label>
+                </div>
+                <div class="md-form-group float-label">
+                  <input type="password" class="md-input" ng-model="user.loginPassword" required  data-ng-keypress="($event.which === 13)?loginNow():0">
+                  <label>Password</label>
+                </div>
+                <div class="m-b-md">        
+                  <label class="md-check">
+                    <input type="checkbox"><i class="indigo"></i> Keep me signed in
+                  </label>
+                </div>
+                <button md-ink-ripple type="submit" class="md-btn md-raised pink btn-block p-h-md" data-ng-click="loginNow()">Sign in</button>
+                <div class="p-v-md text-center">
+                  <div><button ui-sref="access.forgot-password" class="md-btn">Forgot password?</button></div>
+                  <div>Do not have an account? <button ui-sref="access.signup" class="md-btn">Create an account</button></div>
+                </div>
+              </form>
+            </div>
+
+            <p class="lead" style="font-weight:500; font-size:19px; padding:22px;">If you loath to report status to management and hate to feed data to any sort of management tools then join the world's only work platform where you work only for yourself. Absolutely no work about work. A global social network of professionals where conversations and self forming groups cause enterprise structures to emerge.</p>
+          </div>
+      </div>
+    </div>
+
+</div>
+</div>
+  
+
+
+<style type="text/css">
+  .indigo {
+    background-color: #168FB3;
+}
+
+.md-whiteframe-z1 {
+  box-shadow: 0px 3px 18px 4px rgba(0, 0, 0, 0.26);
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+.container {
+  width: 600px;
+}
+}
+
+@media (min-width: 992px) {
+.container {
+  width: 600px;
+}
+}
+
+@media (min-width: 1200px) {
+.container {
+  width: 600px;
+}
+}
+</style>
+

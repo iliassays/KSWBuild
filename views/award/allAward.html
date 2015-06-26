@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-sm-4">
+        <a ui-sref="award.create" class="btn btn-success">Create New Template</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3" data-ng-repeat="(groupName,groupValue) in awardsGroup">
+        <h3>{{groupName | capitalize}}</h3>
+        <div class="panel panel-card" data-ng-repeat="award in groupValue" data-ng-click="onAwardSelect(award)">
+            <div class="item">
+                <img ng-src="{{award.imageUri | kswUrlFilter}}" class="w-full r-t" alt="Washed Out">
+            </div>
+            <div class="p">
+                <h4>  {{award.title}}</h4>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+<div class="row row-sm p">
+    <div class="col-sm-4 col-sm-6 col-md-5 col-md-offset-1">
+        <div class="form-group">
+            <!--<label for="create-connection">CREATE CONNECTIONS</label>-->
+            <!--<select ng-model="selectedAccount" id="create-connection" class="form-control"-->
+                    <!--ng-selected="0"-->
+                    <!--ng-options="request as request.title for request in organizationsConnectionRequest"-->
+                    <!--data-ng-change="accountOnChange(selectedAccount)">-->
+            <!--</select>-->
+            <a ui-sref="connection.accept" class="btn btn-success btn-sm-w-full">View Request</a>
+        </div>
+    </div>
+</div>
+
+<div class="row row-sm p">
+    <div class="col-sm-6 col-md-5 col-md-offset-1">
+        <div class="row m-b-sm">
+            <div class="col-sm-12">
+                <h6>INVITATION</h6>
+            </div>
+        </div>
+
+       <div class="row">
+           <div class="col-sm-12">
+               <div class="md-list md-whiteframe-z0 bg-white m-b">
+                   <div class="form-group">
+                       <input type="search" placeholder="Email Address or Name" data-ng-change="updateSearchResults(searchKey)"
+                              data-ng-model="searchKey" class="form-control">
+                   </div>
+                   <div class="md-list-item" data-ng-repeat="result in searchResults" data-ng-click="selectResult(result)">
+                       <div class="md-list-item-left">
+                           <img data-ng-if="result.entityType == 'Person'"
+                                data-ng-src="{{result.entityId | kswImageFilter: 60:result.entityId}}"
+                                alt="" class="w-full circle img-40"/>
+                           <img data-ng-if="result.entityType == 'Organization'"
+                                data-ng-src="{{result.entityId | kswImageFilter: 60:result.entityId:true}}"
+                                alt="" class="w-full circle img-40"/>
+                       </div>
+                       <div class="md-list-item-content">
+                           <h3 class="text-md">{{result.title}}</h3>
+                           <small class="font-thin">{{result.entityType}}</small>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+        <div class="row p">
+            <div class="col-sm-12">
+                <div class="md-list md-whiteframe-z0 bg-white m-b">
+                    <div class="md-list-item" data-ng-repeat="connection in selectedConnections">
+                        <div class="md-list-item-left">
+                            <img data-ng-if="connection.entityType == 'Person'"
+                                 data-ng-src="{{connection.entityId | kswImageFilter: 60:connection.entityId}}"
+                                 alt="" class="w-full circle"/>
+                            <img data-ng-if="connection.entityType == 'Organization'"
+                                 data-ng-src="{{connection.entityId | kswImageFilter: 60:connection.entityId:true}}"
+                                 alt="" class="w-full circle"/>
+                        </div>
+                        <div class="md-list-item-content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3 class="text-md">{{connection.title}}</h3>
+                                    <small class="font-thin">{{connection.entityType}}</small>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <input type="text" data-ng-model="connection.relation" class="form-control"/>
+                        <span class="input-group-btn">
+            <button class="btn btn-success waves-effect" type="button" data-ng-click="sendInvitation(connection)">
+                <i class="pull-right glyphicon glyphicon-ok" title="Send"></i>
+            </button>
+          </span>
+                        <span class="input-group-btn">
+            <button class="btn btn-warning waves-effect" type="button" data-ng-click="removeInvitation(connection)">
+                <i title="Remove"
+                   class="pull-right glyphicon glyphicon-remove"></i></button>
+          </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="invitation-bottom" data-ng-if="selectedConnections.length">
+                    <a href="" class="btn btn-success" data-ng-click="sendInvitationToAll()">Send Invitation To All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-5">
+        <div class="row m-b-sm">
+            <div class="col-sm-6"><h6>PEOPLE YOU MAY KNOW</h6></div>
+            <div class="col-sm-6 text-left-xs text-right"><a href="" class="btn btn-sm-w-full btn-success" data-ng-click="sendRequestAll()">Send Request to
+                All</a></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="md-list md-whiteframe-z0 bg-white m-b">
+                    <div class="md-list-item" data-ng-repeat="recommended in allConnections.recommendedConnections">
+                        <div class="md-list-item-left">
+
+                            <img data-ng-if="recommended.entityType == 'Person'"
+                                 data-ng-src="{{recommended.entityId | kswImageFilter: 60:recommended.entityId}}"
+                                 alt="" class="w-full circle"/>
+                            <img data-ng-if="recommended.entityType == 'Organization'"
+                                 data-ng-src="{{recommended.entityId | kswImageFilter: 60:recommended.entityId:true}}"
+                                 alt="" class="w-full circle"/>
+                        </div>
+                        <div class="md-list-item-content">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3 class="text-md">{{recommended.title}}</h3>
+                                    <small class="font-thin">{{recommended.entityType}}</small>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <input type="text" data-ng-model="recommended.relation" class="form-control"/>
+                        <span class="input-group-btn">
+            <button class="btn btn-success waves-effect" type="button" data-ng-click="sendRequest(recommended)">
+                <i class="pull-right glyphicon glyphicon-ok" title="Send"></i>
+            </button>
+          </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
